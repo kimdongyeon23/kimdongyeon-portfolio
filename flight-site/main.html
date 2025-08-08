@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>항공사 사이트</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="responsive.css">
+    <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- swiper slide -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="inner flex">
+                <a href="#" class="header-alert" aria-expanded="true">
+                    <strong class="notice-label">[공지]</strong>
+                    태풍으로 인한 일부 국내·국제선 항공편 결항 및 지연 안내 (7월 1일 기준)
+                </a>
+                <button class="close-btn" aria-label="공지 닫기">×</button>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="inner flex ai-center jc-between">
+                <div class="header-bototm-left flex ai-center jc-between">
+                    <div class="header-logo">
+                        <h1><a href="#">logo</a></h1>
+                    </div>
+                    <nav class="defalut-nav">
+                        <ul class="gnb-menu flex ai-center jc-between">
+                            <li><a href="#">예약</a></li>
+                            <li><a href="#">온라인면세점</a></li>
+                            <li><a href="#">이벤트</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="defalut-user-menu">
+                    <ul class="gnb-util flex ai-center jc-between">
+                        <li>
+                            <a class="login-btn" href="#">로그인</a>
+                        </li>
+                        <li class="flex jc-between ai-center">
+                            <label for="lang-select" class="visually-hidden">언어선택</label>
+                            <select id="lang-select" aria-label="언어 선택">
+                                <option value="ko">한국어(Korean)</option>
+                                <option value="en">ENG(English)</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <div class="res-user-btn">
+                    <button class="res-user-toggle" aria-label="메인 메뉴 열기" aria-expanded="false" aria-controls="main-gnb">☰</button>
+                </div>
+            </div>
+            <div class="res-user-menu" hidden>
+                <ul class="res-user-actions flex">
+                    <li>
+                        <a class="login-btn" href="#">로그인</a>
+                    </li>
+                    <li class="flex jc-between ai-center">
+                        <label for="lang-select" class="visually-hidden">언어선택</label>
+                        <select id="lang-select" aria-label="언어 선택">
+                            <option value="ko">한국어(Korean)</option>
+                            <option value="en">ENG(English)</option>
+                        </select>
+                    </li>
+                </ul>
+                <ul class="res-gnb">
+                    <li><a href="#">예약</a></li>
+                    <li><a href="#">온라인면세점</a></li>
+                    <li><a href="#">이벤트</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="booking-sec" aria-label="예약 섹션">
+            <h2 class="visually-hidden">예약 섹션</h2>
+            <div class="inner">
+                <ul class="flex">
+                    <li class="tab-item">
+                        <button class="tab-btn active" aria-selected="true" role="tab" aria-controls="form-reserve" data-target="form-reserve">항공권 예매</button>
+                    </li>
+                    <li class="tab-item">
+                        <button class="tab-btn" aria-selected="false" role="tab" aria-controls="form-check" data-target="form-check">예약 조회</button>
+                    </li>
+                    <li class="tab-item"> 
+                        <button class="tab-btn" aria-selected="false" role="tab" aria-controls="form-checkin" data-target="form-checkin">체크인</button>
+                    </li>
+                </ul>
+                <form class="tab-form active" aria-label="항공권 예매 폼" role="tabpanel" id="form-reserve">
+                    <h3 class="visually-hidden">항공권 예매</h3>
+                    <fieldset class="reserve-fieldset flex jc-between ">
+                        <legend class="visually-hidden">항공권 예약 정보 입력</legend>
+                        <div class="form-group flex ai-center jc-between">
+                            <div class="location-select flex ai-center jc-between">
+                                <button class="from-airport">SEL</button>
+                                <button class="arrow" aria-label="출발지와 도착지 전환">
+                                    <img src="img/icons/double-headed arrow.svg" alt="출발지와 도착지 전환 아이콘">
+                                </button>
+                                <button class="to-airport" aria-expanded="false">TO</button>
+                            </div>
+                        </div>
+                        <div class="form-group departure-date-group">
+                            <span id="departure-label">출발일</span>
+                            <div class="flex ai-end date-trigger option-btn" aria-labelledby="departure-label">
+                                <div class="img">
+                                    <img src="img/icons/calendar.svg" alt="달력 아이콘">
+                                </div>
+                                <input type="date" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <span id="passenger-label">탑승 인원</span>
+                            <button class="flex ai-end passenger-trigger option-btn" aria-labelledby="passenger-label">
+                                <div class="img">
+                                    <img src="img/icons/people.svg" alt="인원 아이콘">
+                                </div>
+                                <span class="option-text">성인1명</span>
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <span id="seats-label">좌석 선택</span>
+                            <button class="flex ai-end seat-trigger option-btn" aria-labelledby="seats-label">
+                                <div class="img">
+                                    <img src="img/icons/seats.svg" alt="좌석 아이콘">
+                                </div>
+                                <span class="option-text">선택하세요</span>
+                            </button>
+                        </div>
+                        <div class="form-submit-wrap">
+                            <button type="submit" class="tab-search-btn">항공편 검색</button>
+                        </div>
+                    </fieldset>
+                </form>
+                <form class="tab-form" aria-label="항공권 예약조회 폼" role="tabpanel" id="form-check">
+                    <h3 class="visually-hidden">항공권 예약조회</h3>
+                    <fieldset class="flex jc-between">
+                        <legend class="visually-hidden">항공권 예약 조회</legend>
+                        <div class="form-group">
+                            <label for="search-reserve-num">예약번호 또는 항공권번호</label>
+                            <input type="text" id="search-reserve-num" class="option-btn" placeholder="예) A1B2C3 또는 1801234567890">
+                        </div>
+                        <div class="form-group departure-date-group">
+                            <span id="departure-label">출발일</span>
+                            <div class="flex ai-end date-trigger option-btn" aria-labelledby="departure-label">
+                                <div class="img">
+                                    <img src="img/icons/calendar.svg" alt="달력 아이콘">
+                                </div>
+                                <input type="date" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reserve-last-name">성</label>
+                            <input type="text" id="reserve-last-name" class="option-btn" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="reserve-first-name">이름</label>
+                            <input type="text" id="reserve-first-name" class="option-btn" required />
+                        </div>
+                        <div class="form-submit-wrap">
+                            <button type="submit" class="tab-search-btn">항공편 검색</button>
+                        </div>
+                    </fieldset>
+                </form>
+                <form class="tab-form" aria-label="항공권 체크인 폼" role="tabpanel" id="form-checkin">
+                    <h3 class="visually-hidden">항공권 체크인</h3>
+                    <fieldset class="flex jc-between">
+                        <legend class="visually-hidden">항공권 체크인</legend>
+                        <div class="form-group">
+                            <label for="checkin-reserve-num">예약번호 또는 항공권번호</label>
+                            <input type="text" id="checkin-reserve-num" class="option-btn" placeholder="예) A1B2C3 또는 1801234567890">
+                        </div>
+                        <div class="form-group departure-date-group">
+                            <span id="departure-label">출발일</span>
+                            <div class="flex ai-end date-trigger option-btn" aria-labelledby="departure-label">
+                                <div class="img">
+                                    <img src="img/icons/calendar.svg" alt="달력 아이콘">
+                                </div>
+                                <input type="date" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reserve-last-name">성</label>
+                            <input type="text" id="reserve-last-name" class="option-btn" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="reserve-first-name">이름</label>
+                            <input type="text" id="reserve-first-name" class="option-btn" required />
+                        </div>
+                        <div class="form-submit-wrap">
+                            <button type="submit" class="tab-search-btn">항공편 검색</button>
+                        </div>                    
+                    </fieldset>
+                </form> 
+            </div>
+        </section>
+        <section class="info-sec" aria-label="프로모션 섹션">
+            <h2 class="visually-hidden">프로모션 섹션</h2>
+            <div class="inner">
+                <div class="swiper info-swiper" role="region" aria-label="여행 정보 슬라이드">
+                    <button class="info-prev-btn slide-prev-btn" aria-label="이전 팝업 보기"
+                    aria-controls="info-slide-wrapper">&lt;</button>
+                    <div class="swiper-wrapper" id="info-slide-wrapper">
+                        <div class="swiper-slide" aria-label="1/6" role="group" aria-roledescription="첫번쨰 슬라이드">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="img/info/info1.jpg" alt="마일리지로 떠나는 여름 휴가 안내 이미지">
+                                </div>
+                                <span>마일리지로 떠나는 여름 휴가, 중형기로 쾌적한 여행을 즐기세요</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-roledescription="두번째 슬라이드" aria-label="2/6">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="img/info/info2.jpg" alt="편안한 이코노미 안내 이미지">
+                                </div>
+                                <span>비즈니스처럼 편안한 이코노미, 중장거리도 쾌적하게</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-roledescription="세번째 슬라이드" aria-label="3/6">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="img/info/info3.jpg" alt="마일리지 혜택 안내 이미지">
+                                </div>
+                                <span>마일리지로 누리는 특별한 여름, 지금 예약하고 혜택도 챙기세요</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-roledescription="네번째 슬라이드" aria-label="4/6">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="img/info/info4.jpg" alt="가족 여행 준비 안내 이미지">
+                                </div>
+                                <span>전 가족이 함께 떠나는 여행, 유아 좌석부터 기내식까지 미리 준비하세요</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-roledescription="다섯번째 슬라이드" aria-label="5/6">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="img/info/info5.jpg" alt="여름 직항 노선 안내 이미지">
+                                </div>
+                                <span>여름엔 역시 직항! 인기 노선은 조기 마감되니 지금 바로 예매하세요</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-roledescription="여섯번째 슬라이드" aria-label="6 / 6">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="img/info/info6.jpg" alt="모바일 체크인 안내 이미지">
+                                </div>
+                                <span>출장도 여유롭게, 모바일 체크인으로 빠르게 탑승하세요</span>
+                            </a>
+                        </div>
+                    </div>
+                    <button class="info-next-btn slide-next-btn" aria-label="다음 팝업 보기" aria-controls="info-slide-wrapper">&gt;</button>
+                </div>
+            </div>
+        </section>
+        <section class="notice-sec" aria-label="공지 섹션">
+            <div class="inner">
+                <div class="sec-header">
+                    <h2>안내드립니다</h2>
+                </div>
+                <div class="article-group flex jc-between">
+                    <article class="slider-article">
+                        <h4 id="notice-slide-title" class="visually-hidden">공지사항 슬라이드</h4>
+                        <button class="slide-prev-btn notice-prev-btn" aria-label="이전 슬라이드" aria-controls="notice-slide-wrapper">&lt;</button>
+                        <div class="swiper notice-swiper" role="region" aria-labelledby="notice-slide-title"
+                        aria-roledescription="공지슬라이드 모음">
+                            <div class="swiper-wrapper" id="notice-slide-wrapper">
+                                <div class="swiper-slide" role="group" aria-roledescription="첫번째 공지 슬라이드" aria-label="1/3">
+                                    <a href="#"><img src="img/info/info2.jpg" alt="수하물 규정 변경 안내 이미지"/></a>
+                                </div>
+                                <div class="swiper-slide" role="group" aria-roledescription="두번째 공지 슬라이드" aria-label="2/3">
+                                    <a href="#"><img src="img/info/info3.jpg" alt="국제선 운항 재개 안내 이미지"/></a>
+                                </div>
+                                <div class="swiper-slide" role="group" aria-roledescription="세번째 공지 슬라이드" aria-label="3/3">
+                                    <a href="#"><img src="img/info/info4.jpg" alt="여름철 항공기 운항 지연 및 결항 안내 이미지"/></a>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="slide-next-btn notice-next-btn" aria-label="다음 슬라이드" aria-controls="notice-slide-wrapper">&gt;</button>
+                    </article>
+                    <article class="list-article">
+                        <h4 id="notice-list-title" class="visually-hidden">공지사항 리스트</h4>
+                        <ul aria-labelledby="notice-list-title"> 
+                            <li>
+                                <a href="#" class="flex jc-between">
+                                <span class="text">여름 성수기 기간 주요 인기 노선 항공편 증편 운항 안내</span>
+                                <span class="date">2025.07.01</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex jc-between">
+                                <span class="text">국제선 일부 노선의 위탁 수하물 허용 기준 변경 안내 (8월 1일부터 적용)</span>
+                                <span class="date">2025.07.03</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex jc-between">
+                                <span class="text">인천국제공항 보안 강화에 따른 국제선 탑승 수속 마감 시간 조정 안내</span>
+                                <span class="date">2025.07.05</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex jc-between">
+                                <span class="text">2025년 9월부터 인천-발리 직항 신규 노선 취항 및 특가 이벤트 안내</span>
+                                <span class="date">2025.07.07</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex jc-between">
+                                <span class="text">홈페이지 및 모바일 앱 시스템 정기 점검 예정 안내 (7월 14일 00시~04시)</span>
+                                <span class="date">2025.07.09</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex jc-between">
+                                <span class="text">마일리지 적립 제도 변경 안내 (10월 1일부터 시행)</span>
+                                <span class="date">2025.07.10</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="faq-sec" aria-label="자주 묻는 질문">
+            <div class="inner">
+                <div class="sec-header">
+                    <h2>자주 묻는 질문</h2>
+                </div>
+                <ul class="flex accordion-list">
+                    <li class="accordion-item">
+                        <h4>
+                            <button class="accordion-toggle" aria-expanded="false" aria-controls="content1">항공권은 어떻게 예매하나요?</button>
+                            <div class="accordion-content" id="content1" aria-hidden="true">항공권은 홈페이지 또는 모바일 앱에서 예매하실 수 있습니다. 날짜, 출발지, 도착지를 선택한 후 결제를 완료하시면 예매가 완료됩니다.</div>
+                        </h4>
+                    </li>
+                    <li class="accordion-item">
+                        <h4>
+                            <button class="accordion-toggle" aria-expanded="false" aria-controls="content2">예매한 항공권은 어떻게 확인하나요?</button>
+                            <div class="accordion-content" id="content2" aria-hidden="true">홈페이지 상단의 "예약 조회" 메뉴에서 예약 번호와 성함을 입력하시면 예약 내역을 확인하실 수 있습니다.</div>
+                        </h4>
+                    </li>
+                    <li class="accordion-item">
+                        <h4>
+                            <button class="accordion-toggle" aria-expanded="false" aria-controls="content3">위탁 수하물 허용 기준은 어떻게 되나요?</button>
+                            <div class="accordion-content" id="content3" aria-hidden="true">일반석 기준 1인당 23kg 1개까지 무료 위탁 수하물이 제공됩니다. 자세한 내용은 수하물 안내 페이지를 참고해주세요.</div>
+                        </h4>
+                    </li>
+                    <li class="accordion-item">
+                        <h4>
+                            <button class="accordion-toggle" aria-expanded="false" aria-controls="content4">항공권 취소 또는 변경은 어떻게 하나요?</button>
+                            <div class="accordion-content" id="content4" aria-hidden="true">홈페이지 또는 고객센터를 통해 예약 취소 및 일정 변경이 가능합니다. 운임 조건에 따라 수수료가 부과될 수 있습니다.</div>
+                        </h4>
+                    </li>
+                    <li class="accordion-item">
+                        <h4>
+                            <button class="accordion-toggle" aria-expanded="false" aria-controls="content5">탑승 수속은 언제부터 가능한가요?</button>
+                            <div class="accordion-content" id="content5" aria-hidden="true">온라인 체크인은 출발 24시간 전부터 가능하며, 공항 카운터 체크인은 출발 2시간 전부터 시작됩니다. 국제선은 3시간 전 도착을 권장합니다.</div>
+                        </h4>
+                    </li>
+                    <li class="accordion-item">
+                        <h4>
+                            <button class="accordion-toggle" aria-expanded="false" aria-controls="content6">기내에 반입 가능한 물품은 어떤 것이 있나요?</button>
+                            <div class="accordion-content" id="content6" aria-hidden="true" >개인 소지품과 10kg 이하의 기내용 수하물 1개를 반입할 수 있습니다. 위험물은 반입이 제한되며, 상세 내용은 기내 반입 안내를 참고해주세요.</div>
+                        </h4>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <nav class="inner main-footer" aria-label="사이트 푸터 네비게이션">
+            <ul class="main-footer-menu flex jc-between">
+                <li>
+                    <h4 class="footer-menu-title">회사소개</h4>
+                    <ul class="footer-menu-list flex">
+                        <li class="footer-menu-item"><a href="#" class="footer-link">Our Transformation</a></li>
+                        <li class="footer-menu-item"><a href="#" class="footer-link">항공사에 대하여</a></li>
+                        <li class="footer-menu-item"><a href="#" class="footer-link">기업지배구조</a></li>
+                        <li class="footer-menu-item"><a href="#" class="footer-link">투자정보</a></li>
+                        <li class="footer-menu-item"><a href="#" class="footer-link">지속가능경영</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h4 class="footer-menu-title">고객지원</h4>
+                    <ul class="footer-menu-list flex">
+                        <li class="footer-menu-item"><a href="#" class="footer-link">공지사항</a></li>
+                        <li class="footer-menu-item"><a href="#" class="footer-link">고객의 말씀</a></li>
+                        <li class="footer-menu-item"><a href="#" class="footer-link">서비스 센터</a></li>
+                        <li class="footer-menu-item"><a href="#" class="footer-link">e-서식함</a></li>
+                        <li class="footer-menu-item"><a href="#" class="footer-link">웹 접근성</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h4 class="footer-menu-title">약관 및 규정</h4>
+                    <ul class="footer-menu-list flex">
+                        <li class="footer-menu-item"><a href="#" class="footer-link">개인정보 처리방침</a></li>
+                        <li class="footer-menu-item"><a href="#" class="footer-link">이용 약관</a></li>
+                        <li class="footer-menu-item"><a href="#" class="footer-link">운송약관 및 고지사항</a></li>
+                        <li class="footer-menu-item"><a href="#" class="footer-link">소비자 안전 관련 정보</a></li>
+                        <li class="footer-menu-item"><a href="#" class="footer-link">운임 및 서비스 요금표</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h4 class="footer-menu-title">기타 안내</h4>
+                    <ul class="footer-menu-list flex">
+                        <li class="footer-menu-item"><a href="#" class="footer-link">쿠키 설정</a></li>
+                        <li class="footer-menu-item"><a href="#" class="footer-link">뉴스룸 (외부링크)</a></li>
+                        <li class="footer-menu-item"><a href="#" class="footer-link">기업 출장 / 전용기</a></li>
+                        <li class="footer-menu-item"><a href="#" class="footer-link">고객 안내 서비스</a></li>
+                        <li class="footer-menu-item"><a href="#" class="footer-link">항공교통이용자 서비스 계획</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h4 class="footer-menu-title">인기 방문국가</h4>
+                    <ul class="footer-menu-list flex">
+                        <li class="footer-menu-item"><a href="#" class="footer-link">중국</a></li>
+                        <li class="footer-menu-item"><a href="#" class="footer-link">뉴질랜드</a></li>
+                        <li class="footer-menu-item"><a href="#" class="footer-link">포르투갈</a></li>
+                        <li class="footer-menu-item"><a href="#" class="footer-link">사이트맵</a></li>
+                        <li class="footer-menu-item"><a href="#" class="footer-link">항공교통이용자 피해 구제</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <nav class="inner res-footer" aria-label="사이트 반응형 푸터 네비게이션">
+            <ul class="footer-menu">
+                <li class="footer-accordion-item">
+                    <button class="footer-accordion-btn" aria-expanded="false">
+                    회사소개
+                    </button>
+                    <ul class="footer-panel" hidden>
+                        <li><a href="#">Our Transformation</a></li>
+                        <li><a href="#">항공사에 대하여</a></li>
+                        <li><a href="#">기업지배구조</a></li>
+                        <li><a href="#">투자정보</a></li>
+                        <li><a href="#">지속가능경영</a></li>
+                    </ul>
+                </li>
+                <li class="footer-accordion-item">
+                    <button class="footer-accordion-btn" aria-expanded="false">
+                    고객지원
+                    </button>
+                    <ul class="footer-panel" hidden>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">고객의 말씀</a></li>
+                    <li><a href="#">서비스 센터</a></li>
+                    <li><a href="#">e-서식함</a></li>
+                    <li><a href="#">웹 접근성</a></li>
+                    </ul>
+                </li>
+                <li class="footer-accordion-item">
+                    <button class="footer-accordion-btn" aria-expanded="false">
+                    약관 및 규정
+                    </button>
+                    <ul class="footer-panel" hidden>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">이용 약관</a></li>
+                    <li><a href="#">운송약관 및 고지사항</a></li>
+                    <li><a href="#">소비자 안전 관련 정보</a></li>
+                    <li><a href="#">운임 및 서비스 요금표</a></li>
+                    </ul>
+                </li>
+                <li class="footer-accordion-item">
+                    <button class="footer-accordion-btn" aria-expanded="false">
+                    기타 안내
+                    </button>
+                    <ul class="footer-panel" hidden>
+                    <li><a href="#">쿠키 설정</a></li>
+                    <li><a href="#">뉴스룸 (외부링크)</a></li>
+                    <li><a href="#">기업 출장 / 전용기</a></li>
+                    <li><a href="#">고객 안내 서비스</a></li>
+                    <li><a href="#">항공교통이용자 서비스 계획</a></li>
+                    </ul>
+                </li>
+                <li class="footer-accordion-item">
+                    <button class="footer-accordion-btn" aria-expanded="false">
+                    인기 방문국가
+                    </button>
+                    <ul class="footer-panel" hidden>
+                    <li><a href="#">중국</a></li>
+                    <li><a href="#">뉴질랜드</a></li>
+                    <li><a href="#">포르투갈</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                    <li><a href="#">항공교통이용자 피해 구제</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </footer> 
+</body>
+<!-- swiper slide -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="main.js"></script>
+</html>

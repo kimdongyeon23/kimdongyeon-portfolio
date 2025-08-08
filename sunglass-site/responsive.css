@@ -1,0 +1,82 @@
+@media (max-width: 1400px) {
+    .main-bg {
+        object-fit: contain;
+    }
+}
+@media (max-width: 1024px) {
+    html {
+        font-size: 14px;
+    }
+    section {
+        padding: 5rem 0 ;
+    }
+    .inner {
+        width: 90%;
+    }
+    .main-bg:nth-child(2){
+        display: none;
+    }
+    .default-gnb {
+        display: none;
+    }
+    .tab-open-btn {
+        display: block;
+    }
+    .user-menu a {
+        width: 35px;
+    }
+    .new-sec .inner {
+        flex-direction: column;
+    }
+    .store-sec .inner {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .store-sec article {
+        width: 100%;
+        display: flex;
+    }
+    .store-image {
+        width: 15rem;
+    }
+}
+@media (max-width: 770px) {
+    html {
+        font-size: 13px;
+    }
+    .tab-open-btn {
+        width: 34px;
+    }
+    .user-menu {
+        gap: 20px;
+    }
+    .user-menu a {
+        width: 28px;
+    }
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .footer-menu {
+        flex-direction: row;
+        margin-bottom: 15px;
+    }
+    .footer-contact {
+        flex-direction: row;
+    }
+}
+@media (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+    .brand-item {
+        width: 38vw;
+    }
+    .store-details h4 {
+        font-size: 1.3rem;
+    }
+    .store-address {
+        font-size: 1.2rem;
+    }
+}

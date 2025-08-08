@@ -1,0 +1,309 @@
+body {
+    font-family: 'Overpass Mono', monospace;
+    color: #555;
+}
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: #fff;
+    position: relative;
+    margin-bottom: 112px;
+}
+img {
+    width: 100%;
+    margin-bottom: -4px;
+}
+a {
+    color: inherit;         
+    text-decoration: none; 
+    background-color: transparent; 
+    cursor: pointer;        
+    outline: none;           
+}
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+section {
+    padding: 7rem 0;
+}
+li {
+    list-style: none;
+}
+input {
+    border: none;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+.inner {
+    width: 90%;
+    margin: 0 auto;
+    align-items: flex-end;
+}
+.flex {
+    display: flex;
+}
+.jc-between {
+    justify-content: space-between;
+}
+.jc-center {
+    justify-content: center
+}
+.ai-center {
+    align-items: center;
+}
+.ai-end {
+    align-items: end;
+}
+.project-sec {
+    height: 100vh;
+}
+.project-sec .name-wrapper {
+    width: 30%;
+    color: #444;
+    padding: 0 0 2rem 6rem;
+    font-size: 2.5rem;
+}
+.project-panel {
+    width: 60%;
+}
+.swiper-wrapper {
+    align-items: center;
+}
+.slide-prev-btn,
+.slide-next-btn {
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    font-size: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    z-index: 99;
+}
+.slide-prev-btn {
+    left: 0;
+    border-radius: 0 10px 10px 0;
+}
+.slide-next-btn {
+    right: 0;
+    border-radius: 10px 0 0 10px;
+}
+.slide-pagination {
+    color: #666;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    z-index: 99;
+}
+.swiper-slide {
+    cursor: pointer;
+}
+.project-img {
+    position: relative;
+    height: 25rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+.project-img img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.project-img:hover img {
+    transform: scale(1.1);
+}
+.swiper-slide-next .project-img {
+    height: 22rem;
+    position: relative;
+    overflow: hidden;
+}
+.swiper-slide-next > .project-img::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    pointer-events: none; 
+    border-radius: inherit;
+}
+.modal-details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 30px;
+    padding: 50px 70px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+    color: #eeeeee;
+    background-color: #222; 
+}
+.mockup {
+    width: 450px;
+    margin: 0 auto 20px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+.detail-text {
+    padding: 0.5rem 4.5rem;
+}
+.detail-text .project-name {
+    font-size: 22px;
+    margin: 0 20px 15px;
+    font-weight: 700;
+}
+.detail-text ul li {
+    padding: 0 20px;
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+.detail-text ul li strong {
+    font-weight: 700;
+}
+.link-block {
+    margin-top: 40px;
+    gap: 15px;
+}
+.link-block a {
+    padding: 12px 25px;
+    font-weight: 600;
+    border-radius: 7px;
+    display: block;
+}
+.github-link {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #FFEDB3;
+    background-color: #333;
+    border: 2px solid #FFEDB3;
+}
+.site-link {
+    color: #5C3B00;
+    border: 2px solid #5C3B00;
+    background: #FFEDB3;
+}
+.figma-link {
+    border: 2px solid #FFEDB3;
+    background: #5C3B00;
+    color: #FFEDB3;
+}
+.project-detail {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;     
+    inset: 0;            
+    background: rgba(0, 0, 0, 0.85); 
+    color: #fff;
+    z-index: 1000;       
+}
+.close-modal {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #fff;
+    color: #333;
+    font-size: 28px;
+    font-weight: 600;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+.project-detail.detail-1 {
+    background: 
+        linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)),
+        url('img/modal-bg/library-website-bg.jpg') center / cover no-repeat;
+}
+.project-detail.detail-2 {
+    background: linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)),url('img/modal-bg/sunglass-website-bg.jpg') center / cover no-repeat;
+}
+.project-detail.detail-3 {
+    background: linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)),url('img/modal-bg/flight-website-bg.jpg') center / cover no-repeat;
+}
+.project-detail.detail-4 {
+    background: linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)),url('img/modal-bg/map-website-bg.png') center / cover no-repeat;
+}
+/* skills-sec */
+.skills-sec {
+    background-color: #f9f9f9;
+    color: #666;
+}
+.skills-wrap {
+    flex-wrap: wrap;
+    gap: 2.4rem;
+}
+.skill-block {
+    flex: 0 0 47%; 
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(80, 80, 80, 0.05);
+}
+.skill-block h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.skill-block p {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.7;
+}
+.about-sec .inner {
+    align-items: stretch;
+}
+.img-wrap {
+    width: 200px;
+    margin-right: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.about-text {
+    flex: 1;
+    gap: 2rem;
+}
+.about-block {
+    flex: 1;
+    flex-direction: column;
+    padding-left: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(80, 80, 80, 0.05);
+}
+.about-heading {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+.about-info {
+    margin-bottom: 8px;
+    color: #444;
+}
+.about-info a {
+    color: #0077cc;
+    text-decoration: none;
+}
+.about-info a:hover {
+    text-decoration: underline;
+}

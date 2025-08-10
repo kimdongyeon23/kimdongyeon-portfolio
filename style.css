@@ -64,9 +64,7 @@ input {
 .ai-center {
     align-items: center;
 }
-.ai-end {
-    align-items: end;
-}
+/* === 메인 프로젝트 섹션 === */
 .project-sec {
     height: 100vh;
 }
@@ -165,6 +163,20 @@ input {
     border-radius: 1rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
+.project-detail.detail-1 {
+    background: 
+        linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)),
+        url('img/modal-bg/library-website-bg.jpg') center / cover no-repeat;
+}
+.project-detail.detail-2 {
+    background: linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)),url('img/modal-bg/sunglass-website-bg.jpg') center / cover no-repeat;
+}
+.project-detail.detail-3 {
+    background: linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)),url('img/modal-bg/flight-website-bg.jpg') center / cover no-repeat;
+}
+.project-detail.detail-4 {
+    background: linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)),url('img/modal-bg/map-website-bg.png') center / cover no-repeat;
+}
 .detail-text {
     padding: 0.5rem 4.5rem;
 }
@@ -183,13 +195,12 @@ input {
 }
 .link-block {
     margin-top: 40px;
-    gap: 15px;
+    gap: 10px;
 }
 .link-block a {
     padding: 12px 25px;
     font-weight: 600;
     border-radius: 7px;
-    display: block;
 }
 .github-link {
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -230,24 +241,13 @@ input {
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     cursor: pointer;
 }
-.project-detail.detail-1 {
-    background: 
-        linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)),
-        url('img/modal-bg/library-website-bg.jpg') center / cover no-repeat;
-}
-.project-detail.detail-2 {
-    background: linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)),url('img/modal-bg/sunglass-website-bg.jpg') center / cover no-repeat;
-}
-.project-detail.detail-3 {
-    background: linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)),url('img/modal-bg/flight-website-bg.jpg') center / cover no-repeat;
-}
-.project-detail.detail-4 {
-    background: linear-gradient(rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.7)),url('img/modal-bg/map-website-bg.png') center / cover no-repeat;
-}
-/* skills-sec */
+/* === 스킬 섹션 === */
 .skills-sec {
     background-color: #f9f9f9;
     color: #666;
+}
+.about-sec .inner {
+    align-items: stretch;
 }
 .skills-wrap {
     flex-wrap: wrap;
@@ -270,15 +270,13 @@ input {
     font-weight: 500;
     line-height: 1.7;
 }
-.about-sec .inner {
-    align-items: stretch;
-}
 .img-wrap {
     width: 200px;
     margin-right: 50px;
     border-radius: 10px;
     overflow: hidden;
 }
+/* === 소개 섹션 === */
 .about-text {
     flex: 1;
     gap: 2rem;

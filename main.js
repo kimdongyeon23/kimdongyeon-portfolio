@@ -1,3 +1,4 @@
+// 프로젝트 슬라이드
 const swiper = new Swiper('.swiper', {
     loop: true,
     slidesPerView: 1.2,     
@@ -13,6 +14,7 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
+// 모달 열기
 const projectDetail = document.querySelectorAll('.project-detail')
 const swiperSlides = document.querySelectorAll('.swiper-slide')
 
@@ -30,6 +32,7 @@ swiperSlides.forEach(slide=>{
     })
 });
 
+// 모달 닫기
 const closeModalBtns = document.querySelectorAll('.close-modal');
 closeModalBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -41,3 +44,8 @@ closeModalBtns.forEach(btn => {
     });
 });
 
+// 링크 새페이지에서 열기
+document.querySelectorAll('a').forEach(link => {
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener noreferrer');
+});

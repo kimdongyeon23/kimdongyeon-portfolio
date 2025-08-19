@@ -153,15 +153,25 @@ input {
     gap: 30px;
     padding: 50px 70px;
     border-radius: 10px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
     color: #eeeeee;
     background-color: #222; 
 }
+.mockup-wrap {
+    gap: 30px;
+    align-items: end;
+    padding: 40px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
 .mockup {
-    width: 450px;
     margin: 0 auto 20px;
     border-radius: 1rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+.mockup-pc {
+    width: 400px;
+}
+.mockup-mb {
+    width: 150px;
 }
 .project-detail.detail-1 {
     background: 

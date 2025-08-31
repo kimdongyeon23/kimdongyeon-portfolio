@@ -1,0 +1,15 @@
+footer {
+    background: #fafafa;
+    padding: 3rem 0;
+}
+.footer-menu {
+    flex-direction: column;
+    gap: 1rem;
+}
+.footer-contact {
+    flex-direction: column;
+    gap: .5rem;
+}
+.footer-bottom {
+    text-align: center;
+}

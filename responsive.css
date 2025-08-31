@@ -1,0 +1,17 @@
+@media (max-width: 1500px){
+    html {
+        font-size: 15px;
+    }
+    section {
+        padding: 100px 0;
+    }
+    section .inner {
+        width: 85%;
+    }
+    .about-date {
+        width: 170px;
+    }
+    .slick-dots {
+    bottom: -80px;
+    }
+}

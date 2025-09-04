@@ -11,6 +11,10 @@
     .about-date {
         width: 170px;
     }
+    .slick-next, 
+    .slick-prev {
+        top: 0px;
+    }
     .slick-dots {
     bottom: -80px;
     }

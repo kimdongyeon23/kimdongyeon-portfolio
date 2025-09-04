@@ -46,7 +46,7 @@ li {
     border: 0;
 }
 .inner {
-    width: 80%;
+    width: 85%;
     height: 100%;
     margin: 0 auto;
 }
@@ -171,9 +171,10 @@ li {
 /* ========== project-section ==========  */
 .project-section {
     background: #333333;
+    padding: 100px 0;
 }
 .content-wrap {
-    gap: 70px;
+    gap: 100px;
 }
 .info-wrap {
     flex: 1;
@@ -181,10 +182,11 @@ li {
 .project-slider .img-wrap {
     display: inline-block;
     flex: 1;
+    padding-top: 70px;
 }
 .slick-next, 
 .slick-prev {
-    top: 30px;
+    top: 0px;
     z-index: 100;
 }
 .slick-next {
@@ -216,7 +218,8 @@ li {
     opacity: .5;
 }
 .slide {
-    margin-top: 200px;
+    margin-top: 100px;
+    padding: 10px;
 }
 .project-title {
     font-weight: 300;
@@ -241,6 +244,26 @@ li {
 .project-desc {
     flex: 1;
     text-align: justify;
+}
+.links-wrap {
+    gap: 35px;
+    margin-top: 40px;
+}
+.site-link,
+.github-link {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    color: #666;
+    font-weight: 600;
+    border-radius: 5px;
+    background: #fff2e8;
+    transition: all .4s ease;
+}
+.site-link:hover,
+.github-link:hover {
+    color: #111;
+    padding: 15px 30px 15px 30px;
 }
 .slick-dots {
     bottom: -120px;

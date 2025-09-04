@@ -1,4 +1,4 @@
-// 링크 새페이지에서 열기
+// ========== 링크 새페이지에서 열기 ==========
 document.querySelectorAll('a').forEach(link => {
     link.setAttribute('target', '_blank');
     link.setAttribute('rel', 'noopener noreferrer');

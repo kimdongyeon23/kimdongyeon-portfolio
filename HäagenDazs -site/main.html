@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 기본 css -->
+    <link rel="stylesheet" href="./css/defalut.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- 반응형 css -->
+    <link rel="stylesheet" href="./css/responsive.css">
+    <!-- 슬릭 슬라이더 기본 스타일 -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- 슬릭 슬라이더 테마 스타일 -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <title>Häagen-Dazs 사이트</title>
+</head>
+<body> 
+    <!-- ================= 헤더 섹션 ================= -->
+    <header>
+        <div class="inner flex jc-between ai-center">
+            <h1 class="logo">
+                <a href="#" aria-label="Häagen-Dazs 홈으로 이동">Häagen-Dazs</a>
+            </h1>
+            <nav class="default-nav jc-between ai-center">
+                <ul class="list-wrap flex jc-between ai-center">
+                    <li>
+                        <a href="#">New</a>
+                    </li>
+                    <li>
+                        <a href="#">Flavors</a>
+                    </li>
+                    <li>
+                        <a href="#">Our Story</a>
+                    </li>
+                    <li>
+                        <a href="#">Stores</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- ================= header 반응형 탭 ================= -->
+            <button class="tab-overlay-btn ai-center" aria-label="메뉴 열기">≡</button>
+        </div>
+        <div class="overlay"></div>
+        <div class="tab-wrap flex" aria-hidden="true">
+            <button class="tab-close-btn ai-center" aria-label="메뉴 닫기">x</button>
+            <nav class="tab-nav flex">
+                <a href="#">New</a>
+                <a href="#">Flavors</a>
+                <a href="#">Our Story</a>
+                <a href="#">Stores</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- ================= 메인 섹션 ================= -->
+        <section class="hero-section">
+            <div class="inner">
+                <div class="hero-container flex">
+                    <div class="hero-content hero-img">
+                        <img src="img/hero/hero01.png" alt="Häagen-Dazs 아이스크림 이미지">
+                    </div>
+                    <div class="hero-content hero-text-content flex">
+                        <div class="sub-content flex">
+                            <div class="hero-subimg">
+                                <img src="img/hero/hero02.png" alt="Häagen-Dazs 제품 이미지">
+                            </div>
+                            <p class="hero-description">
+                                A little luxury in every bite.<br>
+                                Smooth, creamy, unforgettable.<br>
+                                This is Häagen-Dazs.
+                            </p>
+                            <h2 class="hero-title">Häagen-Dazs</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ================= 신제품 섹션 ================= -->
+        <section class="new-section">
+            <div class="inner">
+                <div class="item-slide-wrap explore-text-wrap">
+                    <div class="text-slide">
+                        <div class="text-wrap">
+                            <h2>Decadent flavors made to be savored</h2>
+                            <a href="#" aria-label="신제품 보기">Explore Now</a>
+                        </div>
+                    </div>
+                    <div class="item-slide">
+                        <a href="#">
+                            <div class="item-img">
+                                <img src="img/new-product/new01.png" alt="">
+                            </div>
+                            <div class="item-info flex jc-between">
+                                <p class="item-type">BAR</p>
+                                <h3 class="item-name">Salted Caramel Macadamia Bar</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item-slide">
+                        <a href="#">
+                            <div class="item-img">
+                                <img src="img/new-product/new02.png" alt="">
+                            </div>
+                            <div class="item-info flex jc-between">
+                                <p class="item-type">ICE CREAM</p>
+                                <h3 class="item-name">Salted Brown Butter Cookie</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item-slide">
+                        <a href="#">
+                            <div class="item-img">
+                                <img src="img/new-product/new03.png" alt="">
+                            </div>
+                            <div class="item-info flex jc-between">
+                                <p class="item-type">SORBET</p>
+                                <h3 class="item-name">Summer Blueberry & Lemon Sorbet</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item-slide">
+                        <a href="#">
+                            <div class="item-img">
+                                <img src="img/new-product/new04.png" alt="">    
+                            </div>
+                            <div class="item-info flex jc-between">
+                                <p class="item-type">SORBET</p>
+                                <h3 class="item-name">Vanilla Salted Caramel Cone</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="text-slide">
+                        <div class="text-wrap discover-text-wrap">
+                            <h2>Want to see more?</h2>
+                            <a href="#" aria-label="신제품 보기">Discover More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ================= 브랜드 스토리 섹션 ================= -->
+        <section class="brand-story-section">
+            <div class="inner">
+                <div class="story-text-wrap flex">
+                    <h4>A RICH HISTORY</h4>
+                    <h3>Best enjoyed slowly but surely</h3>
+                    <p>Starting with three simple flavors</p>
+                    <a href="#" class="learn-more-btn">LEARN MORE</a>
+                </div>
+            </div>
+        </section>
+        <!-- ================= 레시피 섹션 ================= -->
+        <section class="recipes-section">
+            <div class="inner">
+                <div class="recipes-slide-wrap">
+                    <div class="text-slide">
+                        <div class="text-wrap">
+                            <h2>Taste the Art</h2>
+                            <a href="#" aria-label="레시피 더보기">Explore Now</a>
+                        </div>
+                    </div>
+                    <div class="item-slide">
+                        <a href="#">
+                            <div class="item-img">
+                                <img src="img/recipes/recipe01.png" alt="Dulche De Leche Ice Cream Pie 레시피">
+                            </div>
+                            <div class="item-info flex">
+                                <h3 class="item-name">Dulche De Leche Ice Cream Pie</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item-slide">
+                        <a href="#">
+                            <div class="item-img">
+                                <img src="img/recipes/recipe02.png" alt="Warm Apple Cinnamon 레시피">
+                            </div>
+                            <div class="item-info flex">
+                                <h3 class="item-name">Warm Apple Cinnamon</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item-slide">
+                        <a href="#">
+                            <div class="item-img">
+                                <img src="img/recipes/recipe03.png" alt="Chocolate Ice Cream Cupcakes 레시피">
+                            </div>
+                            <div class="item-info flex">
+                                <h3 class="item-name">Chocolate Ice Cream Cupcakes</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item-slide">
+                        <a href="#">
+                            <div class="item-img">
+                                <img src="img/recipes/recipe04.png" alt="Mango Ginger Fizz Mocktail 레시피">
+                            </div>
+                            <div class="item-info flex">
+                                <h3 class="item-name">Mango Ginger Fizz Mocktail</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item-slide">
+                        <a href="#">
+                            <div class="item-img">
+                                <img src="img/recipes/recipe05.png" alt="Vanilla Ice Cream Brownie Bars 레시피">
+                            </div>
+                            <div class="item-info flex">
+                                <h3 class="item-name">Vanilla Ice Cream Brownie Bars</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ================= 매장 섹션 ================= -->
+        <section class="shop-section">
+            <div class="inner flex ai-center">
+                <div class="shop-img">
+                    <img src="img/shop.png" alt="">
+                </div>
+                <ul class="store-list">
+                    <li class="flex jc-between ai-center">
+                        <div class="store-info">
+                            <h3 class="store-name">Orlando Vineland Premium Outlets</h3>
+                            <p class="store-address">8200 Vineland Ave, Orlando, FL 32821</p>
+                        </div>
+                        <a href="#" class="more-btn flex ai-center" aria-label="매장 정보 자세히 보기">→</a>
+                    </li>
+                    <li class="flex jc-between ai-center">
+                        <div class="store-info">
+                            <h3 class="store-name">Borgata Casino</h3>
+                            <p class="store-address">1 Borgata Way, Atlantic City, NJ 08401</p>
+                        </div>
+                        <a href="#" class="more-btn flex ai-center" aria-label="매장 정보 자세히 보기">→</a>
+                    </li>
+                    <li class="flex jc-between ai-center">
+                        <div class="store-info">
+                            <h3 class="store-name">City Creek Center</h3>
+                            <p class="store-address">50 S Main St, Salt Lake City, UT 84101</p>
+                        </div>
+                        <a href="#" class="more-btn flex ai-center" aria-label="매장 정보 자세히 보기">→</a>
+                    </li>
+                    <li class="flex jc-between ai-center">
+                        <div class="store-info">
+                            <h3 class="store-name">Anchorage Village</h3>
+                            <p class="store-address">345 W 104th Ave, Anchorage, AK 99515</p>
+                        </div>
+                        <a href="#" class="more-btn flex ai-center" aria-label="매장 정보 자세히 보기">→</a>
+                    </li>
+                    <li class="flex jc-between ai-center">
+                        <div class="store-info">
+                            <h3 class="store-name">Chandler Fashion Center</h3>
+                            <p class="store-address">3111 W Chandler Blvd, Chandler, AZ 85226</p>
+                        </div>
+                        <a href="#" class="more-btn flex ai-center" aria-label="매장 정보 자세히 보기">→</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <!-- ================= 푸터 섹션 ================= -->
+    <footer class="footer-section">
+        <div class="inner flex jc-between">
+            <!-- <div class="logo-img">
+                <img src="img/footer-logo.svg" alt="footer-logo">
+            </div> -->
+            <div class="footer-links">
+                <h4 class="footer-title">LEARN MORE</h4>
+                <ul class="flex links-wrap">
+                    <li><a href="#" class="footer-link">FAQ</a></li>
+                    <li><a href="#" class="footer-link">Privacy</a></li>
+                    <li><a href="#" class="footer-link">Accessibility</a></li>
+                    <li><a href="#" class="footer-link">Sitemap</a></li>
+                    <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+                    <li><a href="#" class="footer-link">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4 class="footer-title">Connect With Us</h4>
+                <ul class="social-links flex">
+                    <li>
+                        <a href="#"><img src="img/sns/facebook_icon.svg" alt="Facebook"></a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/sns/twitter_icon.svg" alt="Twitter">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/sns/youtube-icon.svg" alt="Youtube"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

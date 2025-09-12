@@ -1,3 +1,8 @@
+// ================= 모든 a 태그 기본 이동 동작 막기 =================
+$('a').on('click', function(event) {
+    event.preventDefault();
+});
+
 // ================= 헤더 스크롤 =================
 $(function() {
     $(window).on("scroll", function() {

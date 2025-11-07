@@ -1,25 +1,13 @@
 /* ========== 기본 초기 세팅 ========== */
 body {
     color: #555;
-<<<<<<< HEAD
-    font-family: 'Montserrat', sans-serif;
-=======
     font-family: "Pretendard Variable";
->>>>>>> c11cec2 (edit portfolio)
 }
 *, *::before, *::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-<<<<<<< HEAD
-header {
-    background-color: #fff;
-    position: relative;
-    margin-bottom: 112px;
-}
-=======
->>>>>>> c11cec2 (edit portfolio)
 section {
     position: sticky;
     padding: 200px 0;
@@ -70,10 +58,6 @@ li {
 .ai-center {
     align-items: center;
 }
-<<<<<<< HEAD
-.eng {
-    font-family: 'Gideon Roman', serif;
-=======
 
 /* ========== header ==========  */
 header {
@@ -98,7 +82,6 @@ header nav a {
     display: block;
     font-size: 1.2rem;
     font-weight: 500;
->>>>>>> c11cec2 (edit portfolio)
 }
 
 /* ========== hero-section ==========  */
@@ -109,98 +92,14 @@ header nav a {
     background: url(img/main_bg.png) center / cover no-repeat;
 }
 .hero-section h1 {
-<<<<<<< HEAD
-    font-weight: 200;
-    font-size: 140px;
-    text-align: center;
-=======
     font-weight: 500;
     font-size: 5rem;
     text-align: center;
     text-shadow: 4px 4px 4px rgba(237, 170, 136, 0.8);
->>>>>>> c11cec2 (edit portfolio)
 }
 
 /* ========== about-section ==========  */
 .about-section {
-<<<<<<< HEAD
-    background: url(img/about_bg.png) center / cover no-repeat;
-}
-.profile-wrap {
-    width: 100%;
-}
-.profile-sidebar {
-    flex: 1;
-}
-.profile-sidebar .profile-img {
-    width: 18rem;
-    border-radius: 10px;
-    overflow: hidden;
-}
-.profile-sidebar .info-text {
-    margin-bottom: .7rem;
-    letter-spacing: 2px;
-    font-size: 1.1rem;
-}
-.profile-sidebar .name {
-    font-weight: 700;
-    color: #666;
-    font-size: 2.3rem;
-    margin: 25px 0 15px;
-}
-.profile-sidebar .github-address {
-    border-bottom: .5px solid #e1e1e1;
-    transition: all 0.1s ease;
-    padding-bottom: 3px;
-}
-.profile-sidebar .github-address:hover {
-    border-bottom: .5px solid #555;
-}
-.profile-content {
-    flex: 1;
-}
-.profile-content .education,
-.profile-content .work {
-    margin-bottom: 2rem;
-}
-.profile-content h2 {
-    color: #edaa88;
-    font-weight: 600;
-    font-size: 1.2rem;
-    margin-bottom: .5rem;
-}
-.text-wrap {
-    padding: 5px 8px;
-    display: flex;
-    color: #777;
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-.skills .text-wrap {
-    flex-direction: column;
-}
-.skill-wrap {
-    width: 100%;
-    padding: .4rem 0;
-    margin-bottom: 3px;
-    color: #555;
-}
-.skill-wrap .skill-name {
-    font-size: 1.1rem;
-}
-.about-date {
-    width: 200px;
-}
-.skill-desc {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 5px;
-    border-bottom: .5px solid #e1e1e1;
-    transition: all 0.4s ease;
-=======
     padding-top: 100px;
     background: #fafafa;
     border-bottom: 1px solid #d9ddd9;
@@ -287,7 +186,6 @@ header nav a {
 }
 .open-btn.close {
     transform: rotate(-180deg);
->>>>>>> c11cec2 (edit portfolio)
 }
 .more-btn {
     font-weight: 500;
@@ -297,17 +195,6 @@ header nav a {
 }
 .skill-wrap.active .more-btn {
     transform: rotate(45deg); 
-<<<<<<< HEAD
-}
-
-/* ========== project-section ==========  */
-.project-section {
-    background: #333333;
-    padding: 100px 0;
-}
-.content-wrap {
-    gap: 100px;
-=======
 } 
 
 /* ========== project-section ==========  */
@@ -323,64 +210,10 @@ header nav a {
     gap: 150px;
     margin-top: 130px;
     padding: 10px;
->>>>>>> c11cec2 (edit portfolio)
 }
 .info-wrap {
     flex: 1;
 }
-<<<<<<< HEAD
-.project-slider .img-wrap {
-    display: inline-block;
-    flex: 1;
-    padding-top: 50px;
-}
-.slick-next, 
-.slick-prev {
-    top: 0px;
-    z-index: 100;
-}
-.slick-next {
-    right: 90px;
-}
-.slick-prev {
-    left: 0;
-}
-.slick-prev:before {
-    content: 'Prev';
-}
-.slick-next:before {
-    content: 'Next';
-}
-.slick-next::before,
-.slick-prev::before {
-    font-family: 'Gideon Roman', serif;
-    font-size: 50px;
-    font-weight: 800;
-    color: #ff5500;
-    opacity: 1;
-}
-.slick-prev.slick-disabled,
-.slick-next.slick-disabled {
-    cursor: default;
-}
-.slick-prev.slick-disabled:before,
-.slick-next.slick-disabled:before {
-    opacity: .5;
-}
-.slide {
-    margin-top: 100px;
-    padding: 10px;
-}
-.project-title {
-    font-weight: 300;
-    font-size: 30px;
-    color: #f0986d;
-    margin: 10px 0;
-}
-.info-item {
-    padding: 12px 8px;
-    color: #dddddd;
-=======
 .content-wrap .img-wrap {
     width: 40%;
     margin-top: 60px;
@@ -397,16 +230,11 @@ header nav a {
 }
 .content-wrap .info-item {
     padding: 10px 8px;
->>>>>>> c11cec2 (edit portfolio)
     font-size: 18px;
     line-height: 1.5;
     letter-spacing: .05rem;
 }
-<<<<<<< HEAD
-.info-item .info-label {
-=======
 .content-wrap .info-item .info-label {
->>>>>>> c11cec2 (edit portfolio)
     width: 120px;
     font-weight: 600;
 }
@@ -418,18 +246,10 @@ header nav a {
     text-align: justify;
 }
 .links-wrap {
-<<<<<<< HEAD
-    gap: 35px;
-    margin-top: 40px;
-}
-.site-link,
-.github-link {
-=======
     gap: 20px;
     margin-top: 30px;
 }
 .links-wrap a {
->>>>>>> c11cec2 (edit portfolio)
     flex: 1;
     text-align: center;
     padding: 15px;
@@ -439,25 +259,7 @@ header nav a {
     background: #fff2e8;
     transition: all .4s ease;
 }
-<<<<<<< HEAD
-.site-link:hover,
-.github-link:hover {
-    color: #111;
-    padding: 15px 30px 15px 30px;
-}
-.slick-dots {
-    bottom: -120px;
-}
-.slick-dotted .slick-dots li.slick-active button:before {
-    opacity: 1;
-}
-.slick-dotted .slick-dots li button:before{
-    color: #fafafa;
-    font-size: 14px;
-    opacity: .6;
-=======
 .links-wrap a:hover {
     color: #111;
     padding: 15px 30px 15px 30px;
->>>>>>> c11cec2 (edit portfolio)
 }

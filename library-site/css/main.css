@@ -67,7 +67,7 @@ header {
 /* ========== main section ========== */
 .main-sec {
     padding: 6rem 0 var(--space-lg) 0;
-    background: var(--color-secondary) url('img/main-section-bg.png') no-repeat center/cover;
+    background: var(--color-secondary) url('/library-site/img/main-section-bg.png') no-repeat center/cover;
 }
 .main-sec .inner {
     gap: 2rem;
@@ -341,7 +341,7 @@ header {
     justify-content: center;
 }
 .usage-guide-grid {
-    background: url('img/usage-guide-bg.jpg') no-repeat center/cover;
+    background: url('/library-site/img/usage-guide-bg.jpg') no-repeat center/cover;
     padding: var(--space-md) var(--space-xl);
     justify-content: center;
 }

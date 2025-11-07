@@ -218,7 +218,7 @@ header {
 .booking-sec {
     margin-top: 112px;
     padding: 5rem 0;
-    background: url('img/main-bg.png') no-repeat center/cover;
+    background: url('/flight-site/img/main-bg.png') no-repeat center/cover;
 }
 .tab-item {
     width: 33.3%;

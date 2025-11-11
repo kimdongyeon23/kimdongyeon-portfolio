@@ -134,14 +134,17 @@ header nav a {
     font-size: 1.15rem;
     line-height: 1.7;
 }
+.about-details {
+    width: 48%;
+}
 .text-wrap {
     padding: 8px;
     display: flex;
     font-size: 1.1rem;
     font-weight: 500;
 }
-.about-details {
-    width: 48%;
+.about-date {
+    width: 180px;
 }
 .skills {
     width: 48%;

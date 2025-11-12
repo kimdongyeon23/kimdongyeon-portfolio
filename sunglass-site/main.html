@@ -14,58 +14,71 @@
 </head>
 <body>
     <header>
-        <h1 class="visually-hidden">선글라스 쇼핑몰</h1>
-        <div class="user-tab">
-            <div class="inner flex jc-between">
-                <nav class="default-gnb" aria-label="주요 메뉴">
-                    <ul class="gnb-menu flex ai-center">
-                        <li>
-                            <a href="#">선글라스</a>                        
-                        </li>
-                        <li>
-                            <a href="#">안경</a>                        
-                        </li>
-                        <li>
-                            <a href="#">컬렉션</a>                        
-                        </li>
-                        <li>
-                            <a href="#">스토어</a>                        
-                        </li>
-                    </ul>           
-                </nav>
-                <button class="tab-open-btn" aria-label="메뉴 열기"
-                aria-expanded="false"
-                aria-controls="res-menu">☰</button>
-                <ul class="user-menu flex ai-center">
+        <div class="inner flex jc-between ai-center">
+            <h1 class="logo">
+                <a href="#">
+                    <img src="img/logo.png" alt="사이트 로고">
+                </a>
+            </h1>
+            <nav class="default-gnb" aria-label="주요 메뉴">
+                <ul class="gnb-menu flex ai-center">
                     <li>
-                        <a href="#" aria-label="검색 페이지로 이동"><img src="img/icons/search.svg" alt="검색 아이콘"></a>
+                        <a href="#">선글라스</a>                        
                     </li>
                     <li>
-                        <a href="#" aria-label="마이페이지로 이동"><img src="img/icons/mypage.svg" alt="마이페이지 아이콘"></a>
+                        <a href="#">안경</a>                        
                     </li>
                     <li>
-                        <a href="#" aria-label="카트페이지로 이동"><img src="img/icons/cart.svg" alt="카트 아이콘"></a>
+                        <a href="#">컬렉션</a>                        
                     </li>
-                </ul>
-            </div>
+                    <li>
+                        <a href="#">스토어</a>                        
+                    </li>
+                </ul>           
+            </nav>
+            <ul class="user-menu flex ai-center jc-between">
+                <li>
+                    <a href="#" aria-label="검색 페이지로 이동">Search</a>
+                </li>
+                <li>
+                    <a href="#" aria-label="로그인 페이지로 이동">Log in</a>
+                </li>
+                <li>
+                    <a href="#" aria-label="마이페이지로 이동">My page</a>
+                </li>
+            </ul>
+            <button class="tab-open-btn" aria-label="메뉴 열기"
+            aria-expanded="false"
+            aria-controls="res-menu">☰</button>
         </div>
-        <div class="res-user-tab">
+        <div class="overlay-tab">
             <button class="tab-close-btn" aria-label="닫기" aria-label="메뉴 닫기">×</button>
             <nav class="gnb" aria-label="반응형 주요 메뉴">
-                    <ul class="res-gnb-menu flex ai-center">
-                        <li>
-                            <a href="#">선글라스</a>                        
-                        </li>
-                        <li>
-                            <a href="#">안경</a>                        
-                        </li>
-                        <li>
-                            <a href="#">컬렉션</a>                        
-                        </li>
-                        <li>
-                            <a href="#">스토어</a>                        
-                        </li>
-                    </ul>           
+                <ul class="res-gnb-menu flex ai-center jc-between">
+                    <li>
+                        <a href="#">선글라스</a>                        
+                    </li>
+                    <li>
+                        <a href="#">안경</a>                        
+                    </li>
+                    <li>
+                        <a href="#">컬렉션</a>                        
+                    </li>
+                    <li>
+                        <a href="#">스토어</a>                        
+                    </li>
+                </ul>    
+                <ul class="res-user-menu flex ai-center">
+                    <li>
+                        <a href="#" aria-label="검색 페이지로 이동">Search</a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="로그인 페이지로 이동">Login</a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="마이페이지로 이동">Mypage</a>
+                    </li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -78,43 +91,43 @@
                 <img src="img/main/main02.jpeg" alt="대표 선글라스 제품 이미지">
             </a>
         </section>
-        <section class="new-sec" aria-label="신상품 소개">
-            <h2 class="visually-hidden">메인 섹션</h2>
+        <section class="shape-sec" aria-label="쉐잎 소개">
+            <h2 class="visually-hidden">쉐잎 섹션</h2>
             <div class="inner flex jc-between">
                 <div class="text-box">
-                    <h3>New Season. New Shades.</h3>
-                    <p>Discover the latest arrivals that redefine comfort, style, and attitude.</p>
+                    <h3>Find Your Perfect Sunglass Shape</h3>
+                    <p>Explore trendy frames that highlight your face and elevate every look.</p>
                 </div>
                 <div class="item-list flex jc-between">
                     <article class="item-box">
                         <a href="#" class="product-link">
-                            <div class="product-img flex ai-center">
+                            <h3 class="shape-label">Luna</h3>
+                            <div class="product-img">
                                 <img src="img/new/new01.png" alt="Luna style sunglasses">
-                                <h3 class="shape-label">Luna</h3>
                             </div>
                         </a>
                     </article>
                     <article class="item-box">
                         <a href="#" class="product-link">
-                            <div class="product-img flex ai-center">
+                            <h3 class="shape-label">Pure</h3>
+                            <div class="product-img">
                                 <img src="img/new/new02.png" alt="Pure style sunglasses">
-                                <h3 class="shape-label">Pure</h3>
                             </div>
                         </a>
                     </article>
                     <article class="item-box">
                         <a href="#" class="product-link">
-                            <div class="product-img flex ai-center">
+                            <h3 class="shape-label">Bold</h3>
+                            <div class="product-img">
                                 <img src="img/new/new03.png" alt="Bold style sunglasses">
-                                <h3 class="shape-label">Bold</h3>
                             </div>
                         </a>
                     </article>
                     <article class="item-box">
                         <a href="#" class="product-link">
-                            <div class="product-img flex ai-center">
+                            <h3 class="shape-label">Muse</h3>
+                            <div class="product-img">
                                 <img src="img/new/new04.png" alt="Muse style sunglasses">
-                                <h3 class="shape-label">Muse</h3>
                             </div>
                         </a>
                     </article>
@@ -138,9 +151,7 @@
                                             <img src="img/recommend/first01.jpeg" alt="JD909 SQUARE 007 Black - Blue Lens">
                                         </a>
                                         <div class="product-info flex">
-                                            <div class="brand-name">
-                                                <a href="#">brand name</a>
-                                            </div>
+                                            <a href="#" class="brand-name">Ray-Ban</a>
                                             <a href="#" class="brand-link-area">
                                                 <h4 class="brand-item">Square Frame Sunglasses – Black with Blue Lenses</h4>
                                                 <div class="brand-price">300,000원</div>
@@ -152,9 +163,7 @@
                                             <img src="img/recommend/first02.jpeg" alt="AK560 CAT-EYE 008 Pink - Rose Lens">
                                         </a>
                                         <div class="product-info flex">
-                                            <div class="brand-name">
-                                                <a href="#">brand name</a>
-                                            </div>
+                                            <a href="#" class="brand-name">Ray-Ban</a>
                                             <a href="#" class="brand-link-area">
                                                 <h4 class="brand-item">Cat-Eye Sunglasses – Pink Frame with Rose Lenses</h4>
                                                 <div class="brand-price">330,000원</div>
@@ -166,9 +175,7 @@
                                             <img src="img/recommend/first03.jpeg" alt="ZX808 BOLD 009 Gunmetal - Smoke Lens">
                                         </a>
                                         <div class="product-info flex">
-                                            <div class="brand-name">
-                                                <a href="/brand-page">brand name</a>
-                                            </div>
+                                            <a href="#" class="brand-name">Ray-Ban</a>
                                             <a href="#" class="brand-link-area">
                                                 <h4 class="brand-item">Bold Metal Sunglasses – Gunmetal Frame with Smoke Lenses</h4>
                                                 <div class="brand-price">340,000원</div>
@@ -190,9 +197,7 @@
                                             <img src="img/recommend/second01.jpeg" alt="MH890 AVIATOR 003 Gold - Green Lens">
                                         </a>
                                         <div class="product-info flex">
-                                            <div class="brand-name">
-                                                <a href="#">brand name</a>
-                                            </div>
+                                            <a href="#" class="brand-name">Oakley</a>
                                             <a href="#" class="brand-link-area">
                                                 <h4 class="brand-item">Aviator Sunglasses – Gold Frame with Green Lenses</h4>
                                                 <div class="brand-price">350,000원</div>
@@ -204,9 +209,7 @@
                                             <img src="img/recommend/second02.jpeg" alt="TS301 MINIMAL 004 Matte Black - Clear Lens">
                                         </a>
                                         <div class="product-info flex">
-                                            <div class="brand-name">
-                                                <a href="#">brand name</a>
-                                            </div>
+                                            <a href="#" class="brand-name">Oakley</a>
                                             <a href="#" class="brand-link-area">
                                                 <h4 class="brand-item">Minimal Optical Glasses – Matte Black Frame with Clear Lenses</h4>
                                                 <div class="brand-price">270,000원</div>
@@ -218,9 +221,7 @@
                                             <img src="img/recommend/second03.jpeg" alt="LF777 RETRO 006 Transparent - Brown Gradient Lens">
                                         </a>
                                         <div class="product-info flex">
-                                            <div class="brand-name">
-                                                <a href="/brand-page">brand name</a>
-                                            </div>
+                                            <a href="#" class="brand-name">Oakley</a>
                                             <a href="#" class="brand-link-area">
                                                 <h4 class="brand-item">Retro Transparent Sunglasses – Brown Gradient Lenses</h4>
                                                 <div class="brand-price">290,000원</div>
@@ -242,9 +243,7 @@
                                             <img src="img/recommend/third01.jpeg" alt="SL557 SHADE 001 Black - Black G-15 Green Lens">
                                         </a>
                                         <div class="product-info flex">
-                                            <div class="brand-name">
-                                                <a href="#">brand name</a>
-                                            </div>
+                                            <a href="#" class="brand-name">Persol</a>
                                             <a href="#" class="brand-link-area">
                                                 <h4 class="brand-item">Sunlight Protection Eyewear – Black Frame with Grey Lenses</h4>
                                                 <div class="brand-price">320,000원</div>
@@ -256,9 +255,7 @@
                                             <img src="img/recommend/third02.jpeg" alt="RL234 SPORTY 002 Silver - Blue Mirror Lens">
                                         </a>
                                         <div class="product-info flex">
-                                            <div class="brand-name">
-                                                <a href="#">brand name</a>
-                                            </div>
+                                            <a href="#" class="brand-name">Persol</a>
                                             <a href="#" class="brand-link-area">
                                                 <h4 class="brand-item">Sporty Wrap Sunglasses – Silver Frame with Blue Mirror Lenses</h4>
                                                 <div class="brand-price">280,000원</div>
@@ -270,9 +267,7 @@
                                             <img src="img/recommend/third03.jpeg" alt="VX110 CLASSIC 005 Tortoise - Brown Lens">
                                         </a>
                                         <div class="product-info flex">
-                                            <div class="brand-name">
-                                                <a href="#">brand name</a>
-                                            </div>
+                                            <a href="#" class="brand-name">Persol</a>
                                             <a href="#" class="brand-link-area">
                                                 <h4 class="brand-item">Classic Round Sunglasses – Tortoise Frame with Brown Lenses</h4>
                                                 <div class="brand-price">310,000원</div>
@@ -302,7 +297,7 @@
                         <div class="store-details">
                             <h4>이태원점</h4>
                             <address class="store-address">
-                            서울시 용산구<br>
+                            서울특별시 성동구 연무장길 13 2층<br>
                             <a href="tel:023419970">02-341-9970</a>
                             </address>
                         </div>
@@ -317,7 +312,7 @@
                     <div class="store-details">
                         <h4>성수동점</h4>
                         <address class="store-address">
-                        서울시 용산구<br>
+                        서울특별시 성동구 연무장길 13 2층<br>
                             <a href="tel:023419970">02-341-9970</a>
                         </address>
                     </div>
@@ -332,7 +327,7 @@
                     <div class="store-details">
                         <h4>신사점</h4>
                         <address class="store-address">
-                        서울시 용산구<br>
+                        서울특별시 성동구 연무장길 13 2층<br>
                         <a href="tel:023419970">02-341-9970</a>
                         </address>
                     </div>
@@ -358,7 +353,7 @@
                 <img src="img/icons/newsletter.svg" alt="뉴스레터 아이콘">
             </button>
             <button class="scroll-top-btn hidden" aria-label="맨 위로 이동">
-                <img src="img/icons/up-arrow.svg" alt="위로 가기 아이콘">
+                <img src="img/icons/scroll-top-btn.svg" alt="위로 가기 아이콘">
             </button>
         </div>
     </main>

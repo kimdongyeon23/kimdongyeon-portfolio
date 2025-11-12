@@ -6,7 +6,7 @@ document.querySelectorAll('a').forEach(a => {
 });
 
 // 반응형 탭 토글
-const userTab = document.querySelector('.res-user-tab');
+const userTab = document.querySelector('.overlay-tab');
 const tabCloseBtn = document.querySelector('.tab-close-btn');
 const tabOpenBtn = document.querySelector('.tab-open-btn');
 

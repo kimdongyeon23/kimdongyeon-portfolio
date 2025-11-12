@@ -8,8 +8,9 @@ header {
     border-bottom: .5px solid #d9d9d9;
     z-index: 1000;
 }
-header a {
-    font-weight: 300;
+.logo {
+    width: 120px;
+    z-index: 10000;
 }
 .tab-open-btn {
     display: none;
@@ -26,40 +27,40 @@ header a {
     color: #222;
 }
 .user-menu {
-    gap: 28px;
+    gap: 18px;
 }
 .user-menu a {
-    width: 20px;
+    font-size: .7rem;
     display: block;
 }
 /* === header 반응형 === */
-.res-user-tab {
+.overlay-tab {
     width: 100%;
     height: 100vh;
     position: fixed;
     inset: 0 auto auto 0;
     z-index: 999;
     flex-direction: column;
-    padding: 2rem 1.5rem 0 3rem;
+    padding: 2rem 1.5rem;
     background-color: #fff;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
 }
-.res-user-tab.active {
+.overlay-tab.active {
     transform: translateX(0);
 }
 .tab-close-btn {
     position: absolute;
     top: 1.5rem;
-    left: 3rem;
-    font-size: 44px;
+    right: 3rem;
+    font-size: 50px;
     color: #333;
 }
 .res-gnb-menu {
     width: 100%;
     flex-direction: column;
     gap: 1.5rem;
-    margin-top: 10rem;
+    margin: 10rem 0 7rem;
 }
 .res-gnb-menu li a {
     font-size: 30px;
@@ -67,6 +68,14 @@ header a {
     color: #111;
     padding: 10px;
     display: block;
+}
+.res-user-menu {
+    justify-content: space-around;
+}
+.res-user-menu a {
+    font-size: 1.7rem;
+    color: #777;
+    font-weight: 300;
 }
 
 /* ========== main section =========== */
@@ -90,51 +99,43 @@ header a {
 }
 
 /* =========== new section =========== */
-.new-sec .inner {
+.shape-sec .inner {
     gap: 5rem; 
     flex-wrap: wrap;
     color: #666;
 }
-.new-sec .text-box {
+.shape-sec .text-box {
     flex: 1; 
     min-width: 280px;
 }
-.new-sec .text-box h3 {
+.shape-sec .text-box h3 {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 1.3rem;
     margin-bottom: 10px;
 }
-.new-sec .item-list {
+.shape-sec .item-list {
     flex: 2;
     flex-wrap: wrap;
     gap: 1.5rem;
 }
-.new-sec .item-box {
+.shape-sec .item-box {
     width: calc(50% - 0.75rem);
-    height: 20rem;
-    position: relative;
+    min-height: 230px;
     background: #F6F6F6;
     border: .5px solid #d9d9d9;
+    padding: 1rem;
 }
-.new-sec .product-link {
-    width: 100%;
-    height: 100%;
-    display: block;
+.shape-sec .product-img {
+    padding: .3rem;
 }
-.new-sec .product-img {
-    height: 100%;
-    align-items: center;
-}
-.new-sec .item-box:hover .shape-label {
-    left: 2rem;
-}
-.new-sec .shape-label {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    font-size: 17px;
+.shape-sec .shape-label {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
     font-weight: 600;
-    transition: left 0.3s ease
+    transition: all 0.3s ease;
+}
+.shape-sec .item-box:hover .shape-label {
+    padding-left: 10px;
 }
 
 /* =========== recommend section =========== */
@@ -156,12 +157,12 @@ header a {
     border-radius: 12px;
 }
 .product-list {
+    gap: 1rem;
     flex-direction: column;
-    gap: 1.2rem;
 }
 .product-item {
     align-items: center;
-    gap: 1rem;
+    gap: 1.7rem;
     background: #fff;
     padding: 1rem;
     border-radius: 12px;
@@ -180,27 +181,24 @@ header a {
 }
 .product-info {
     flex-direction: column;
-    gap: 0.4rem;
     flex: 1;
 }
-.product-info a {
-    font-size: 17px;
+.brand-name {
+    font-size: .9rem;
+    font-weight: 600;
 }
 .brand-item {
     width: 10vw;
-    color: #222;
-    font-size: 17px;
-    font-weight: 500;
+    font-size: .85rem;
+    font-weight: 300;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-}
-.brand-name a {
-    font-weight: 600;
-    color: #666;
+    margin: .2rem 0 .4rem;
 }
 .brand-price {
-    font-size: 15px;
+    font-size: .9rem;
+    font-weight: 500;
 }
 .slide-prev-btn,
 .slide-next-btn {
@@ -252,22 +250,26 @@ header a {
 }
 .store-meta {
     width: 100%;
-    padding: 1.25rem;
+    padding: 1rem 1.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .store-details {
     width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .store-details h4 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 .store-address {
     line-height: 1.4;
-    font-size: 1.1rem;
+    font-size: .9rem;
+    font-weight: 300;
     color: #555;
 }
 .store-address a {
@@ -289,24 +291,26 @@ header a {
 }
 /* === newsletter === */
 .newsletter-overlay {
-    display: block;
     width: 100%;
     height: 100%;
     position: fixed;
     inset: 0 auto auto 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1000;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .3s ease;
 }
 .newsletter-overlay.off {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
 }
 .newsletter-popup {
+    width: 30rem;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 30rem;
-    height: 10rem;
     max-width: 500px;
     background-color: #fff;
     border-radius: 12px;
@@ -358,26 +362,34 @@ header a {
 .floating-action-group {
     flex-direction: column;
     position: fixed;
-    bottom: 5rem;
-    right: 2rem;
+    bottom: 3rem;
+    right: 1rem;
     gap: 1.5rem;
     z-index: 999;
 }
 .floating-action-group button {
-    width: 33px;
+    width: 45px;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
 }
 .newsletter-btn {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
 }
 .newsletter-btn.on {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease;
 }
 .scroll-top-btn {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease;
 }
 .scroll-top-btn.hidden {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
 }
+
 
 /* ========== footer section =========== */
 footer {
@@ -394,4 +406,8 @@ footer {
 }
 .footer-bottom {
     text-align: center;
+    font-size: .8rem;
+    font-weight: 300;
+    color: #444;
+    margin-top: 1rem;
 }

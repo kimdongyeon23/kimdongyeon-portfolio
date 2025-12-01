@@ -29,8 +29,10 @@ $(function() {
 
         if ($(this).hasClass("open")) {
             $(this).text("X");
+            $(this).attr("aria-label", "탭 닫기");
         }else{
             $(this).text("≡");
+            $(this).attr("aria-label", "탭 열기");
         }
     });
 });

@@ -26,7 +26,7 @@ header nav .list-wrap li a {
 header.fixed {
     top: 0;
     background: url(../img/header-bg.png) no-repeat center/cover;
-    padding: 30px 0;
+    padding: 2vh 0;
 }
 header.fixed .logo a { 
     color: #3E2523;
@@ -335,35 +335,37 @@ section .slick-next:before {
 }
 
 /* ========== 매장 섹션 ========== */
-.shop-section {
+.store-section {
     padding: 3rem 0;
-    margin: 9rem 0;
+    margin: 4rem 0;
     border-radius: 50px;
     background: #FFF8ED;
 }
-.shop-section .inner {
+.store-section .inner {
     gap: 40px;
 }
-.shop-img {
+.store-img {
     flex: 1;
-    max-height: 400px;
     overflow: hidden;
     border-radius: 12px; 
 }
-.shop-img img {
-    width: 100%;
+.store-img img {
     height: 100%;
     object-fit: cover;
 }
 .store-list {
     flex: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
 }
 .store-list li {
-    border-top: 1px solid #d9d9d9;
-    padding: 15px;
+    border-bottom: 1px solid #d9d9d9;
+    padding: .9rem;
 }
 .store-list li:last-child {
-    border-bottom: 1px solid #d9d9d9;
+    border: none;
 }
 .store-name {
     font-size: 1.2rem;
@@ -376,11 +378,11 @@ section .slick-next:before {
     color: #3E2523;
 }
 .store-list .more-btn {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     color: #3E2523;
     border: 1px solid #3E2523;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 700;
     border-radius: 50%;
     cursor: pointer;  

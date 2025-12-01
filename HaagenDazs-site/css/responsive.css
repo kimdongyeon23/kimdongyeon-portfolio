@@ -26,7 +26,7 @@
     .default-nav .list-wrap li {
         padding: 5px 15px;
     }
-    .tab-overlay-btn {
+    .overlay-toggle-btn {
         display: flex;
     }
     .hero-section {
@@ -210,7 +210,7 @@
     header .logo a {
         font-size: 2rem;
     }
-    .tab-overlay-btn {
+    .overlay-toggle-btn {
         width: 45px;
         height: 45px;
         font-size: 1.7rem;

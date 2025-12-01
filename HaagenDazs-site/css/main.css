@@ -26,7 +26,7 @@ header nav .list-wrap li a {
 header.fixed {
     top: 0;
     background: url(../img/header-bg.png) no-repeat center/cover;
-    padding: 20px 0;
+    padding: 30px 0;
 }
 header.fixed .logo a { 
     color: #3E2523;
@@ -37,15 +37,20 @@ header.fixed .tab-overlay-btn {
 }
 
 /* ========== header 반응형 탭 ========== */
-.tab-overlay-btn {
+.overlay-toggle-btn {
     width: 55px;
     height: 55px;
     border-radius: 50%;
     justify-content: center;
-    font-size: 2.1rem;
+    font-size: 2.3rem;
     color: #671930;
     background: #F0DCE2;
     display: none;
+    z-index: 10000;
+}
+header.fixed .overlay-toggle-btn {
+    background: #671930;
+    color: #F0DCE2;
 }
 .overlay {
     opacity: 0;
@@ -61,7 +66,7 @@ header.fixed .tab-overlay-btn {
 /* ========== header 오버레이 탭 ========== */
 .tab-wrap {
     opacity: 0;
-    padding: 55px 0 100px;
+    padding: 100px 0 100px;
     z-index: 1100;
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
     transform: translateY(-20px);

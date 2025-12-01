@@ -20,17 +20,18 @@ $(function() {
 $(function() {
     const $tabWrap = $(".tab-wrap");
     const $overlay = $(".overlay");
-    const $tabBtn = $(".tab-overlay-btn");
-    const $closeBtn = $(".tab-close-btn");
+    const $tabBtn = $(".overlay-toggle-btn");
 
-    $tabBtn.click(function() {
-        $tabWrap.addClass("open").attr("aria-hidden", "false");
-        $overlay.addClass("open").attr("aria-hidden", "false");
-    });
+    $tabBtn.on("click", function() {
+        $(this).toggleClass("open");
+        $tabWrap.toggleClass("open");
+        $overlay.toggleClass("open");
 
-    $closeBtn.click(function() {
-        $tabWrap.removeClass("open").attr("aria-hidden", "true");
-        $overlay.removeClass("open").attr("aria-hidden", "true");
+        if ($(this).hasClass("open")) {
+            $(this).text("X");
+        }else{
+            $(this).text("≡");
+        }
     });
 });
 

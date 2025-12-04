@@ -283,7 +283,7 @@
     .text-slide.slick-slide,
     .recipes-slide-wrap .item-slide.slick-slide, 
     .recipes-slide-wrap .text-slide.slick-slide {
-        height: 310px;
+        height: 290px;
         margin: 0 5px;
     }
     .item-info {

@@ -33,7 +33,7 @@ li {
 input {
     border: none;
 }
-.visually-hidden {
+.sr-only {
     position: absolute;
     width: 1px;
     height: 1px;

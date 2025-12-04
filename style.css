@@ -58,6 +58,10 @@ li {
 .ai-center {
     align-items: center;
 }
+section h2 {
+    font-size: 3rem;
+    margin-bottom: 14vh;
+}
 
 /* ========== header ==========  */
 header {
@@ -86,6 +90,7 @@ header nav a {
 
 /* ========== hero-section ==========  */
 .hero-section {
+    display: none;
     width: 100%;
     height: 100vh;
     top: 0;
@@ -104,56 +109,55 @@ header nav a {
     background: #fafafa;
     border-bottom: 1px solid #d9ddd9;
 }
-.about-section h2 {
-    font-size: 3rem;
-    margin-bottom: 5rem;
+.about-info {
+    flex-direction: column;
+}
+.about-info, .about-content {
+    width: 43%;
 }
 .about-info {
-    padding: 120px 120px 0 120px;
+    /* padding: 120px 120px 0 120px; */
 }
 .about-info .about-img {
-    width: 20rem;
+    width: 18rem;
+    margin: 0 auto;
 }
 .about-content {
-    padding-top: 120px;
+    /* padding-top: 120px; */
 }
-.about-content .education {
-    margin-bottom: 3rem;
+.about-content .content-box {
+    margin-bottom: 2.5rem;
 }
 .about-content h3 {
     color: #edaa88;
     font-weight: 600;
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.1rem;
 }
 .info-txt {
-    width: 48%;
+    width: 70%;
+    margin: 3rem auto 0;
 }
 .info-txt p {
-    margin-bottom: 1.7rem;
-    font-size: 1.15rem;
+    margin-top: 1.2rem;
     line-height: 1.7;
+    text-align: justify;
 }
-.about-details {
-    width: 48%;
-}
-.text-wrap {
+.about-content .text-wrap {
+    font-size: .95rem;
     padding: 8px;
-    display: flex;
-    font-size: 1.1rem;
-    font-weight: 500;
 }
-.about-date {
+.about-content .about-date {
     width: 180px;
 }
 .skills {
-    width: 48%;
+    /* width: 48%; */
 }
 .skill-img-list {
     padding-left: 8px;
 }
 .skill-img-list li {
-    width: 3.5rem;
+    width: 45px;
 }
 .skill-desc-list {
     max-height: 0;
@@ -165,9 +169,10 @@ header nav a {
 }
 .skill-desc-list li {
     padding: 10px 0;
+    font-size: .9rem;
 }
 .skill-name {
-    width: 90px;
+    width: 100px;
     flex-shrink: 0;
     font-weight: 500;
 }
@@ -204,10 +209,6 @@ header nav a {
 .project-section {
     padding: 100px 0;
     background: #fafafa;
-}
-.project-section h2 {
-    font-size: 3rem;
-    margin-bottom: 3rem;
 }
 .content-wrap {
     gap: 150px;

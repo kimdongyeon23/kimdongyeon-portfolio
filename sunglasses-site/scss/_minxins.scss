@@ -1,0 +1,39 @@
+
+@mixin product-info-mix {
+    flex: 1;
+    min-width: 0;
+}
+@mixin brand-link-mix {
+    font-size: .9rem;
+}
+@mixin product-name-mix {
+    margin: .5rem 0;
+    color: #666;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+@mixin product-price-mix {
+    font-weight: bold;
+}
+@mixin pager-mix {
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+}
+
+@mixin product-item-mix {
+    @include product-info-mix;
+
+    .brand-link-area {
+        @include brand-link-mix;
+    }
+
+    .item-name {
+        @include product-name-mix;
+    }
+    
+    .item-price {
+        @include product-price-mix;
+    }
+}

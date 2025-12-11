@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ========== swiper slider cdn ========== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- ========== font cdn ========== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <!-- ========== style css ========== -->
+    <link rel="stylesheet" href="./scss/style.css">
+    <title>Ray-Ban</title>
+</head>
+<body>
+    <header>
+        <div class="inner flex ai-center jc-between">
+            <div class="flex ai-center">
+                <h1 class="logo">
+                    <a href="#">
+                        <img src="img/logo.svg" alt="사이트 로고">
+                    </a>
+                </h1>
+                <nav class="default-gnb" aria-label="주요 메뉴">
+                    <ul class="gnb-menu flex ai-center">
+                        <li>
+                            <a href="#">구매하기</a>                        
+                        </li>
+                        <li>
+                            <a href="#">Glasses</a>                        
+                        </li>
+                        <li>
+                            <a href="#">Sunglass</a>                        
+                        </li>
+                        <li>
+                            <a href="#">Best</a>                        
+                        </li>
+                        <li>
+                            <a href="#">New</a>                        
+                        </li>
+                        <li>
+                            <a href="#">더 알아보기</a>                        
+                        </li>
+                    </ul>           
+                </nav>
+            </div>
+            <ul class="user-menu flex ai-center jc-between">
+                <li><a href="#">search</a></li>
+                <li><a href="#">cart</a></li>
+                <li><a href="#">login</a></li>
+            </ul>
+            <div class="head-user-menu flex ai-center">
+                <button type="button" aria-label="검색창 열기">
+                    <img src="img/icons/search.svg" alt="">
+                </button>
+                <button type="button" aria-label="알림 열기">
+                    <img src="img/icons/bell.svg" alt="">
+                </button>
+                <button type="button" aria-label="장바구니 열기">
+                    <img src="img/icons/cart.svg" alt="">
+                </button>               
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero-sec">
+            <h2 class="sr-only">메인 화면</h2>
+            <img src="img/hero/hero.jpg" alt="">
+        </section>
+        <section class="shape-sec">
+            <h2 class="sr-only">쉐잎 섹션</h2>
+            <div class="inner">
+                <div class="title-wrap">
+                    <a href="#"class="section-title pc-only">Find your perfect shape
+                        <span aria-hidden="true">></span>
+                    </a>
+                </div>               
+                <div class="shape-slider slider" aria-label="쉐잎 슬라이더">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <article class="item-box">
+                                <a href="#" class="product-link">
+                                    <h3 class="shape-label">wayfarer</h3>
+                                    <div class="product-img">
+                                        <img src="img/shape/wayfarer.png" alt="Luna style sunglasses">
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="item-box">
+                                <a href="#" class="product-link">
+                                    <h3 class="shape-label">polygon</h3>
+                                    <div class="product-img">
+                                        <img src="img/shape/polygon.png" alt="Pure style sunglasses">
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="item-box">
+                                <a href="#" class="product-link">
+                                    <h3 class="shape-label">oval</h3>
+                                    <div class="product-img">
+                                        <img src="img/shape/oval.png" alt="Bold style sunglasses">
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="item-box">
+                                <a href="#" class="product-link">
+                                    <h3 class="shape-label">cateye</h3>
+                                    <div class="product-img">
+                                        <img src="img/shape/cateye.png" alt="Muse style sunglasses">
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="item-box">
+                                <a href="#" class="product-link">
+                                    <h3 class="shape-label">browline</h3>
+                                    <div class="product-img">
+                                        <img src="img/shape/browline.png" alt="Muse style sunglasses">
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="item-box">
+                                <a href="#" class="product-link">
+                                    <h3 class="shape-label">avigator</h3>
+                                    <div class="product-img">
+                                        <img src="img/shape/avigator.png" alt="Muse style sunglasses">
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="pager"></div>
+                </div>
+            </div>
+        </section>
+        <section class="best-sec">
+            <h2 class="sr-only">베스트 상품 섹션</h2>
+            <div class="inner">
+                <div class="title-wrap">
+                    <a href="#"class="section-title pc-only">OUR BEST SELLERS
+                        <span aria-hidden="true">></span>
+                    </a>
+                </div>                
+                <ul class="item-wrap">
+                    <li>
+                        <article>
+                            <a href="#" class="img-wrap">
+                                <img src="img/best/best01.jpg" alt="quare Frame Sunglasses – Black with Blue Lenses">
+                            </a>
+                            <div class="icon-wrap">
+                                <button aria-label="찜하기">
+                                    <img src="img/icons/wish_bk.svg" alt="">
+                                </button>
+                                <button aria-label="장바구니">
+                                    <img src="img/icons/cart.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="brand-link-area">Ray-Ban ></a>
+                                <a href="#" class="info-group">
+                                    <h4 class="item-name">Black round frame glasses</h4>
+                                    <p class="item-price">300,000</p>
+                                </a>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <a href="#" class="img-wrap">
+                                <img src="img/best/best02.jpg" alt="yellow round frame glasses">
+                            </a>
+                            <div class="icon-wrap">
+                                <button aria-label="찜하기">
+                                    <img src="img/icons/wish_bk.svg" alt="">
+                                </button>
+                                <button aria-label="장바구니">
+                                    <img src="img/icons/cart.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="brand-link-area">Ray-Ban ></a>
+                                <a href="#" class="info-group">
+                                    <h4 class="item-name">Yellow round frame glasses</h4>
+                                    <p class="item-price">300,000</p>
+                                </a>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <a href="#" class="img-wrap">
+                                <img src="img/best/best03.jpg" alt="metal frame glasses – 50 size">
+                            </a>
+                            <div class="icon-wrap">
+                                <button aria-label="찜하기">
+                                    <img src="img/icons/wish_bk.svg" alt="">
+                                </button>
+                                <button aria-label="장바구니">
+                                    <img src="img/icons/cart.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="brand-link-area">Ray-Ban ></a>
+                                <a href="#" class="info-group">
+                                    <h4 class="item-name">Metal frame glasses – 50 size</h4>
+                                    <p class="item-price">300,000</p>
+                                </a>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <a href="#" class="img-wrap">
+                                <img src="img/best/best04.jpg" alt="metal frame glasses – 48 size">
+                            </a>
+                            <div class="icon-wrap">
+                                <button aria-label="찜하기">
+                                    <img src="img/icons/wish_bk.svg" alt="">
+                                </button>
+                                <button aria-label="장바구니">
+                                    <img src="img/icons/cart.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="brand-link-area">Ray-Ban ></a>
+                                <a href="#" class="info-group">
+                                    <h4 class="item-name">Metal frame glasses – 48 size</h4>
+                                    <p class="item-price">300,000</p>
+                                </a>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <a href="#" class="img-wrap">
+                                <img src="img/best/best05.jpg" alt="Square Frame Sunglasses – Black Lenses">
+                            </a>
+                            <div class="icon-wrap">
+                                <button aria-label="찜하기">
+                                    <img src="img/icons/wish_bk.svg" alt="">
+                                </button>
+                                <button aria-label="장바구니">
+                                    <img src="img/icons/cart.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="brand-link-area">Ray-Ban ></a>
+                                <a href="#" class="info-group">
+                                    <h4 class="item-name">Square Frame Sunglasses – Black Lenses</h4>
+                                    <p class="item-price">300,000</p>
+                                </a>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <a href="#" class="img-wrap">
+                                <img src="img/best/best06.jpg" alt="Square Frame Sunglasses – Black with purple Lenses">
+                            </a>
+                            <div class="icon-wrap">
+                                <button aria-label="찜하기">
+                                    <img src="img/icons/wish_bk.svg" alt="">
+                                </button>
+                                <button aria-label="장바구니">
+                                    <img src="img/icons/cart.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="brand-link-area">Ray-Ban ></a>
+                                <a href="#" class="info-group">
+                                    <h4 class="item-name">Square Frame Sunglasses – Black with purple Lenses</h4>
+                                    <p class="item-price">300,000</p>
+                                </a>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <a href="#" class="img-wrap">
+                                <img src="img/best/best07.jpg" alt="Square Frame Sunglasses – Black with Blue Lenses">
+                            </a>
+                            <div class="icon-wrap">
+                                <button aria-label="찜하기">
+                                    <img src="img/icons/wish_bk.svg" alt="">
+                                </button>
+                                <button aria-label="장바구니">
+                                    <img src="img/icons/cart.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="brand-link-area">Ray-Ban ></a>
+                                <a href="#" class="info-group">
+                                    <h4 class="item-name">Square Frame Sunglasses – Black with Blue Lenses</h4>
+                                    <p class="item-price">300,000</p>
+                                </a>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <a href="#" class="img-wrap">
+                                <img src="img/best/best08.jpg" alt="Round Frame Sunglasses – Black with yellow Lenses">
+                            </a>
+                            <div class="icon-wrap">
+                                <button aria-label="찜하기">
+                                    <img src="img/icons/wish_bk.svg" alt="">
+                                </button>
+                                <button aria-label="장바구니">
+                                    <img src="img/icons/cart.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="brand-link-area">Ray-Ban ></a>
+                                <a href="#" class="info-group">
+                                    <h4 class="item-name">Round Frame Sunglasses – Black with yellow Lenses</h4>
+                                    <p class="item-price">300,000</p>
+                                </a>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="recommend-sec">
+            <h2 class="sr-only">카테코리별 추천 선글라스 섹션</h2>
+            <div class="inner"> 
+                <div class="recommend-slider slider" aria-label="추천 선글라스 슬라이더">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <h3 class="sr-only">스포츠 아이웨어 추천 슬라이드</h3>
+                            <div class="product-group">
+                                <div class="product-bg">
+                                    <img src="img/recommend/sports_bg.jpeg" alt="스포츠와 스타일을 아우르는 아이웨어 광고 이미지">
+                                </div>
+                                <div class="product-list flex">
+                                    <article class="product-item flex jc-between ai-center">
+                                        <a href="#" class="product-thumb">
+                                            <img src="img/recommend/sports01.jpeg" alt="JD909 SQUARE 007 Black - Blue Lens">
+                                        </a>
+                                        <div class="product-info">
+                                            <a href="#" class="brand-link-area">Ray-Ban ></a>
+                                            <a href="#" class="info-group">
+                                                <h4 class="item-name">JD909 SQUARE 007 Black - Blue Lens</h4>
+                                                <p class="item-price">340,000</p>
+                                            </a>
+                                        </div>
+                                    </article>
+                                    <article class="product-item flex jc-between ai-center">
+                                        <a href="#" class="product-thumb">
+                                            <img src="img/recommend/sports02.jpeg" alt="AK560 CAT-EYE 008 Pink - Rose Lens">
+                                        </a>
+                                        <div class="product-info">
+                                            <a href="#" class="brand-link-area">Ray-Ban ></a>
+                                            <a href="#" class="info-group">
+                                                <h4 class="item-name">AK560 CAT-EYE 008 Pink - Rose Lens</h4>
+                                                <p class="item-price">270,000</p>
+                                            </a>
+                                        </div>
+                                    </article>
+                                    <article class="product-item flex jc-between ai-center">
+                                        <a href="#" class="product-thumb">
+                                            <img src="img/recommend/sports03.jpeg" alt="ZX808 BOLD 009 Gunmetal - Smoke Lens">
+                                        </a>
+                                        <div class="product-info">
+                                            <a href="#" class="brand-link-area">Ray-Ban ></a>
+                                            <a href="#" class="info-group">
+                                                <h4 class="item-name">ZX808 BOLD 009 Gunmetal - Smoke Lens</h4>
+                                                <p class="item-price">340,000</p>
+                                            </a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <h3 class="sr-only">세일 안경 추천 슬라이드</h3>
+                            <div class="product-group">
+                                <div class="product-bg">
+                                    <img src="img/recommend/sale_bg.png" alt="최대 70% 세일">
+                                </div>
+                                <div class="product-list flex">
+                                    <article class="product-item flex jc-between ai-center">
+                                        <a href="#" class="product-thumb">
+                                            <img src="img/recommend/sale01.jpeg" alt="MH890 AVIATOR 003 Gold - Green Lens">
+                                        </a>
+                                        <div class="product-info">
+                                            <a href="#" class="brand-link-area">Ray-Ban ></a>
+                                            <a href="#" class="info-group">
+                                                <h4 class="item-name">MH890 AVIATOR 003 Gold - Green Lens</h4>
+                                                <p class="item-price">310,000</p>
+                                            </a>
+                                        </div>
+                                    </article>
+                                    <article class="product-item flex jc-between ai-center">
+                                        <a href="#" class="product-thumb">
+                                            <img src="img/recommend/sale02.jpeg" alt="TS301 MINIMAL 004 Matte Black - Clear Lens">
+                                        </a>
+                                        <div class="product-info">
+                                            <a href="#" class="brand-link-area">Ray-Ban ></a>
+                                            <a href="#" class="info-group">
+                                                <h4 class="item-name">TS301 MINIMAL 004 Matte Black - Clear Lens</h4>
+                                                <p class="item-price">320,000</p>
+                                            </a>
+                                        </div>
+                                    </article>
+                                    <article class="product-item flex jc-between ai-center">
+                                        <a href="#" class="product-thumb">
+                                            <img src="img/recommend/sale03.jpeg" alt="LF777 RETRO 006 Transparent - Brown Gradient Lens">
+                                        </a>
+                                        <div class="product-info">
+                                            <a href="#" class="brand-link-area">Ray-Ban ></a>
+                                            <a href="#" class="info-group">
+                                                <h4 class="item-name">LF777 RETRO 006 Transparent - Brown Gradient Lens</h4>
+                                                <p class="item-price">340,000</p>
+                                            </a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <h3 class="sr-only">클래식 선글라스 추천 슬라이드</h3>
+                            <div class="product-group">
+                                <div class="product-bg">
+                                    <img src="img/recommend/classic_bg.jpeg" alt="검은색 선글라스를 착용한 여성 모델">
+                                </div>
+                                <div class="product-list flex">
+                                    <article class="product-item flex jc-between ai-center">
+                                        <a href="#" class="product-thumb">
+                                            <img src="img/recommend/classic01.jpeg" alt="SL557 SHADE 001 Black - Black G-15 Green Lens">
+                                        </a>
+                                        <div class="product-info">
+                                            <a href="#" class="brand-link-area">Ray-Ban ></a>
+                                            <a href="#" class="info-group">
+                                                <h4 class="item-name">SL557 SHADE 001 Black - Black G-15 Green Lens</h4>
+                                                <p class="item-price">350,000</p>
+                                            </a>
+                                        </div>
+                                    </article>
+                                    <article class="product-item flex jc-between ai-center">
+                                        <a href="#" class="product-thumb">
+                                            <img src="img/recommend/classic02.jpeg" alt="RL234 SPORTY 002 Silver - Blue Mirror Lens">
+                                        </a>
+                                        <div class="product-info">
+                                            <a href="#" class="brand-link-area">Ray-Ban ></a>
+                                            <a href="#" class="info-group">
+                                                <h4 class="item-name">RL234 SPORTY 002 Silver - Blue Mirror Lens</h4>
+                                                <p class="item-price">280,000</p>
+                                            </a>
+                                        </div>
+                                    </article>
+                                    <article class="product-item flex jc-between ai-center">
+                                        <a href="#" class="product-thumb">
+                                            <img src="img/recommend/classic03.jpeg" alt="VX110 CLASSIC 005 Tortoise - Brown Lens">
+                                        </a>
+                                        <div class="product-info">
+                                            <a href="#" class="brand-link-area">Ray-Ban ></a>
+                                            <a href="#" class="info-group">
+                                                <h4 class="item-name">VX110 CLASSIC 005 Tortoise - Brown Lens</h4>
+                                                <p class="item-price">300,000</p>
+                                            </a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pager"></div>
+                </div>
+            </div>
+        </section>
+        <section class="lookbook-sec">
+            <h2 class="sr-only">룩북 슬라이드 섹션</h2>
+            <div class="inner">
+                <div class="title-wrap">
+                    <a href="#"class="section-title pc-only">Find your best lookbook
+                        <span aria-hidden="true">></span>
+                    </a>
+                </div>
+                <div class="lookbook-slider slider" aria-label="룩북 슬라이더">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <article>
+                                <a href="#" class="img-wrap">
+                                    <img src="img/lookbook/lookbook01.jpg" alt="">
+                                </a>
+                                <div class="info-wrap">
+                                    <a href="#" class="brand-area flex jc-between ai-center">
+                                        <p>Ash compact</p>
+                                        <span>view more ></span>
+                                    </a>
+                                    <p class="collection-name">2025SS Campaign</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article>
+                                <a href="#" class="img-wrap">
+                                    <img src="img/lookbook/lookbook02.jpg" alt="">
+                                </a>
+                                <div class="info-wrap">
+                                    <a href="#" class="brand-area flex jc-between ai-center">
+                                        <p>Ash compact</p>
+                                        <span>view more ></span>
+                                    </a>
+                                    <p class="collection-name">2025SS Campaign</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article>
+                                <a href="#" class="img-wrap">
+                                    <img src="img/lookbook/lookbook03.jpg" alt="">
+                                </a>
+                                <div class="info-wrap">
+                                    <a href="#" class="brand-area flex jc-between ai-center">
+                                        <p>Ash compact</p>
+                                        <span>view more ></span>
+                                    </a>
+                                    <p class="collection-name">2025SS Campaign</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article>
+                                <a href="#" class="img-wrap">
+                                    <img src="img/lookbook/lookbook04.jpg" alt="">
+                                </a>
+                                <div class="info-wrap">
+                                    <a href="#" class="brand-area flex jc-between ai-center">
+                                        <p>Ash compact</p>
+                                        <span>view more ></span>
+                                    </a>
+                                    <p class="collection-name">2025SS Campaign</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article>
+                                <a href="#" class="img-wrap">
+                                    <img src="img/lookbook/lookbook05.jpg" alt="">
+                                </a>
+                                <div class="info-wrap">
+                                    <a href="#" class="brand-area flex jc-between ai-center">
+                                        <p>Ash compact</p>
+                                        <span>view more ></span>
+                                    </a>
+                                    <p class="collection-name">2025SS Campaign</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article>
+                                <a href="#" class="img-wrap">
+                                    <img src="img/lookbook/lookbook06.jpg" alt="">
+                                </a>
+                                <div class="info-wrap">
+                                    <a href="#" class="brand-area flex jc-between ai-center">
+                                        <p>Ash compact</p>
+                                        <span>view more ></span>
+                                    </a>
+                                    <p class="collection-name">2025SS Campaign</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article>
+                                <a href="#" class="img-wrap">
+                                    <img src="img/lookbook/lookbook07.jpg" alt="">
+                                </a>
+                                <div class="info-wrap">
+                                    <a href="#" class="brand-area flex jc-between ai-center">
+                                        <p>Ash compact</p>
+                                        <span>view more ></span>
+                                    </a>
+                                    <p class="collection-name">2025SS Campaign</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article>
+                                <a href="#" class="img-wrap">
+                                    <img src="img/lookbook/lookbook08.jpg" alt="">
+                                </a>
+                                <div class="info-wrap">
+                                    <a href="#" class="brand-area flex jc-between ai-center">
+                                        <p>Ash compact</p>
+                                        <span>view more ></span>
+                                    </a>
+                                    <p class="collection-name">2025SS Campaign</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article>
+                                <a href="#" class="img-wrap">
+                                    <img src="img/lookbook/lookbook09.jpg" alt="">
+                                </a>
+                                <div class="info-wrap">
+                                    <a href="#" class="brand-area flex jc-between ai-center">
+                                        <p>Ash compact</p>
+                                        <span>view more ></span>
+                                    </a>
+                                    <p class="collection-name">2025SS Campaign</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article>
+                                <a href="#" class="img-wrap">
+                                    <img src="img/lookbook/lookbook10.jpg" alt="">
+                                </a>
+                                <div class="info-wrap">
+                                    <a href="#" class="brand-area flex jc-between ai-center">
+                                        <p>Ash compact</p>
+                                        <span>view more ></span>
+                                    </a>
+                                    <p class="collection-name">2025SS Campaign</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="pager"></div>
+                </div>
+            </div>
+        </section>
+        <section class="store-sec">
+            <h2 class="sr-only">매장 소개 섹션</h2>
+            <div class="inner flex jc-between">
+                <article>
+                    <div class="store-img"><img src="img/store/store1.jpg" alt="성수동점 매장 외부 이미지"></div>
+                    <div class="store-info">
+                        <h3 class="store-name">Seongsu</h3>
+                        <address class="store-address">
+                            <p class="address-line flex">
+                                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                <span>2F, 13 Yeonmujang-gil, Seongdong-gu, Seoul, South Korea</span>
+                            </p>
+                            <p class="phone-line flex">
+                                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                                <a href="tel:023419970">02-341-9970</a>
+                            </p>
+                        </address>
+                    </div>
+                </article>
+                <article>
+                    <div class="store-img"><img src="img/store/store2.jpg" alt="이태원점 매장 외부 이미지"></div>
+                    <div class="store-info">
+                        <h3 class="store-name">Itaewon</h3>
+                        <address class="store-address">
+                            <p class="address-line flex">
+                                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                <span>2F, 13 Yeonmujang-gil, Seongdong-gu, Seoul, South Korea</span>
+                            </p>
+                            <p class="phone-line flex">
+                                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                                <a href="tel:023419970">02-341-9970</a>
+                            </p>
+                        </address>
+                    </div>
+                </article>
+                <article>
+                    <div class="store-img"><img src="img/store/store3.jpg" alt="신사점 매장 외부 이미지"></div>
+                    <div class="store-info">
+                        <h3 class="store-name">Sinsa</h3>
+                        <address class="store-address">
+                            <p class="address-line flex">
+                                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                <span>2F, 13 Yeonmujang-gil, Seongdong-gu, Seoul, South Korea</span>
+                            </p>
+                            <p class="phone-line flex">
+                                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                                <a href="tel:023419970">02-341-9970</a>
+                            </p>
+                        </address>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <h2 class="sr-only">푸터</h2>
+        <div class="footer-payment">
+            <h3 class="sr-only">결제 수단</h3>
+            <div class="inner">
+                <ul class="payment-list flex">
+                    <li><img src="img/footer/payment01.png" alt=""></li>
+                    <li><img src="img/footer/payment02.png" alt=""></li>
+                    <li><img src="img/footer/payment03.png" alt=""></li>
+                    <li><img src="img/footer/payment04.png" alt=""></li>
+                    <li><img src="img/footer/payment05.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h3 class="sr-only">결제 수단</h3>
+            <div class="inner flex jc-between">
+                <section class="links-list-wrap">
+                    <h3 class="links-title">HELP & INFORMATION</h3>
+                    <ul class="links-list flex">
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Track order</a></li>
+                        <li><a href="#">Delivery & returns</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </section>
+                <section class="links-list-wrap">
+                    <h3 class="links-title">ABOUT Ray-Ban</h3>
+                    <ul class="links-list flex">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Careers at Ray-Ban</a></li>
+                        <li><a href="#">Corporate responsibility</a></li>
+                        <li><a href="#">Investors' site</a></li>
+                    </ul>
+                </section>
+                <section class="links-list-wrap">
+                    <h3 class="links-title">MORE FROM Ray-Ban</h3>
+                    <ul class="links-list flex">
+                        <li><a href="#">Mobile and Ray-Ban apps</a></li>
+                        <li><a href="#">Gift vouchers</a></li>
+                        <li><a href="#">Black Friday</a></li>
+                        <li><a href="#">Ray-Ban x Thrift+</a></li>
+                    </ul>
+                </section>
+                <section class="links-list-wrap">
+                    <h3 class="links-title">CUSTOMER SERIVCE</h3>
+                    <ul class="links-list flex">
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Return policy</a></li>
+                        <li><a href="#">Size guide</a></li>
+                        <li><a href="#">Shipping info</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div class="footer-legal">
+            <h3 class="sr-only">법적 정보 및 정책</h3>
+            <div class="inner flex jc-between ai-center">
+                <p class="legal-copy">© 2025 Ray-Ban</p>
+                <ul class="legal-links-list flex jc-between ai-center">
+                    <li><a href="#">Privacy & Cookies</a></li>
+                    <li><a href="#">Ts&Cs</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="fixed-bottom-menu flex ai-center"aria-label="하단 유저 메뉴">
+        <a href="#" class="tab-open-btn flex ai-center" aria-expanded="false" >
+            <img src="img/icons/tab_wh.svg" alt="">
+            <span>Menu</span>
+        </a>
+        <a href="#" class="flex ai-center">
+            <img src="img/icons/search_wh.svg" alt="">
+            <span>Search</span>
+        </a>
+        <a href="#" class="flex ai-center">
+            <img src="img/icons/home_wh.svg" alt="">
+            <span>Home</span>
+        </a>
+        <a href="#" class="flex ai-center">
+            <img src="img/icons/wish_wh.svg" alt="">
+            <span>Wish</span>
+        </a>
+        <a href="#" class="flex ai-center">
+            <img src="img/icons/mypage_wh.svg" alt="">
+            <span>My page</span>
+        </a>
+    </div>
+    <!-- ========== 반응형 오버레이 탭 ========== -->
+    <div class="overlay-tab">
+        <button class="tab-close-btn flex" type="button" aria-label="메뉴 닫기">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <section class="login-area flex ai-center">
+            <div class="thumb-icon">
+                <img src="img/icons/login_thumb.svg" alt="">
+            </div>
+            <p>로그인 후 더 많은 혜택 받기</p>
+            <a href="#" class="login-btn">Login</a>
+        </section>
+        <nav class="tab-nav" aria-label="모바일 하단 유저메뉴 내비게이션">
+            <section class="contents-area">
+                <h2 class="contents-title flex ai-center jc-between">Category
+                    <a href="#">view more ></a>
+                </h2>
+                <ul>
+                    <li><a href="#" class="flex jc-between">Sunglass<span aria-hidden="true">></span></a></li>
+                    <li><a href="#" class="flex jc-between">Glasses<span aria-hidden="true">></span></a></li>
+                    <li><a href="#" class="flex jc-between">Lenses<span aria-hidden="true">></span></a></li>
+                    <li><a href="#" class="flex jc-between">New<span aria-hidden="true">></span></a></li>
+                </ul>
+            </section>
+            <section class="contents-area">
+                <h2 class="contents-title flex ai-center jc-between">Community
+                    <a href="#">view more ></a>
+                </h2>
+                <ul>
+                    <li><a href="#" class="flex jc-between">HELP & INFORMATION<span aria-hidden="true">></span></a></li>
+                    <li><a href="#" class="flex jc-between">ABOUT Ray-Ban<span aria-hidden="true">></span></a></li>
+                    <li><a href="#" class="flex jc-between">MORE FROM Ray-Ban<span aria-hidden="true">></span></a></li>
+                    <li><a href="#" class="flex jc-between">CUSTOMER SERIVCE<span aria-hidden="true">></span></a></li>
+                </ul>
+            </section>
+            <section class="contents-area">
+                <h2 class="contents-title flex ai-center jc-between">Care service
+                    <a href="#">view more ></a>
+                </h2>
+                <ul>
+                    <li><a href="#" class="flex jc-between">Online service<span aria-hidden="true">></span></a></li>
+                    <li><a href="#" class="flex jc-between">Off service<span aria-hidden="true">></span></a></li>
+                </ul>
+            </section>
+        </nav>
+    </div>
+    <!-- ========== 화면 상단 이동 버튼 ========== -->
+    <div class="floating-wrap">
+        <button class="scroll-top-btn" aria-label="화면 상단 이동">
+            <img src="img/icons/toTOp.svg" alt="">
+        </button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+.inner {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1300px;
+}
+.flex {
+    display: flex;
+}
+.jc-between {
+    justify-content: space-between
+}
+.ai-center {
+    align-items: center;
+}
+.ai-end {
+    align-items: flex-end;
+}
+.section-title {
+    display: block;
+    margin-bottom: 4vh;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.4em;
+    color: #444;
+}
+.section-title span {
+    margin-left: 8px;
+    font-weight: 100;
+    font-size: 1.5rem;
+    color: #555;
+}
+.swiper {
+    width: 100%;
+}
+.slider {
+    overflow: hidden;
+}
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #ffb86b;
+}

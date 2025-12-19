@@ -3,293 +3,604 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 기본 css -->
-    <link rel="stylesheet" href="./css/defalut.css">
-    <!-- main css -->
-    <link rel="stylesheet" href="./css/main.css">
-    <!-- 반응형 css -->
-    <link rel="stylesheet" href="./css/responsive.css">
+    <!-- reset css -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- 컴포넌트 css -->
+    <link rel="stylesheet" href="./css/variables.css">
     <!-- 슬릭 슬라이더 기본 스타일 -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!-- 슬릭 슬라이더 테마 스타일 -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <!-- aos 라이브러리 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- 반응형 css -->
+    <link rel="stylesheet" href="./css/responsive.css">
     <title>Häagen-Dazs</title>
 </head>
 <body> 
-    <!-- ================= 헤더 섹션 ================= -->
+    <!-- ======================== 헤더 섹션 ======================== -->
     <header>
-        <div class="inner flex jc-between ai-center">
-            <h1 class="logo">
-                <a href="#" aria-label="Häagen-Dazs 홈으로 이동">Häagen-Dazs</a>
-            </h1>
-            <nav class="default-nav jc-between ai-center">
-                <ul class="list-wrap flex jc-between ai-center">
+        <div class="inner">
+            <nav class="pc-only grid ai-center">
+                <ul class="gnb gnb-left flex jc-between ai-center">
                     <li>
-                        <a href="#">New</a>
+                        <a href="#">창업안내</a>
                     </li>
                     <li>
-                        <a href="#">Flavors</a>
+                        <a href="#">프로모션</a>
                     </li>
                     <li>
-                        <a href="#">Our Story</a>
+                        <a href="#">스토리</a>
                     </li>
                     <li>
-                        <a href="#">Stores</a>
+                        <a href="#">상품 안내</a>
+                    </li>
+                </ul>                
+                <h1 class="logo">
+                    <a href="#" aria-label="Häagen-Dazs 홈으로 이동"><img src="img/logo.svg" alt=""></a>
+                </h1>
+                <ul class="gnb gnb-right flex jc-between ai-center">
+                    <li>
+                        <a href="#">회사소개</a>
+                    </li>
+                    <li>
+                        <a href="#">매장정보</a>
+                    </li>
+                    <li>
+                        <a href="#">온라인 주문</a>
+                    </li>
+                    <li>
+                        <a href="#">매거진</a>
                     </li>
                 </ul>
             </nav>
-            <!-- ================= header 반응형 탭 ================= -->
-            <button class="overlay-toggle-btn ai-center" aria-label="탭 열기">≡</button>
+            <!-- ======================== header 반응형 탭 ======================== -->
+            <button class="tab-open-btn ai-center" aria-label="탭 열기">≡</button>
         </div>
         <div class="overlay"></div>
-        <div class="tab-wrap flex" aria-hidden="true">
-            <nav class="tab-nav flex">
-                <a href="#">New</a>
-                <a href="#">Flavors</a>
-                <a href="#">Our Story</a>
-                <a href="#">Stores</a>
+        <div class="tab-wrap" aria-hidden="false">
+            <nav class="mo-only">
+                <ul class="gnb">
+                    <li class="flex ai-center jc-between">
+                        <a href="#">창업안내</a>
+                        <button class="gnb-toggle" aria-expanded="false">
+                            <span class="icon-arrow" aria-hidden="true"></span>
+                        </button>
+                    </li>
+                    <li class="flex ai-center jc-between">
+                        <a href="#">프로모션</a>
+                        <button class="gnb-toggle" aria-expanded="false">
+                            <span class="icon-arrow" aria-hidden="true"></span>
+                        </button>
+                    </li>
+                    <li class="flex ai-center jc-between">
+                        <a href="#">스토리</a>
+                        <button class="gnb-toggle" aria-expanded="false">
+                            <span class="icon-arrow" aria-hidden="true"></span>
+                        </button>
+                    </li>
+                    <li class="flex ai-center jc-between">
+                        <a href="#">상품 안내</a>
+                        <button class="gnb-toggle" aria-expanded="false">
+                            <span class="icon-arrow" aria-hidden="true"></span>
+                        </button>
+                    </li>
+                </ul>                
+                <ul class="gnb">
+                    <li class="flex ai-center jc-between">
+                        <a href="#">회사소개</a>
+                        <button class="gnb-toggle" aria-expanded="false">
+                            <span class="icon-arrow" aria-hidden="true"></span>
+                        </button>
+                    </li>
+                    <li class="flex ai-center jc-between">
+                        <a href="#">매장정보</a>
+                        <button class="gnb-toggle" aria-expanded="false">
+                            <span class="icon-arrow" aria-hidden="true"></span>
+                        </button>
+                    </li>
+                    <li class="flex ai-center jc-between">
+                        <a href="#">온라인 주문</a>
+                        <button class="gnb-toggle" aria-expanded="false">
+                            <span class="icon-arrow" aria-hidden="true"></span>
+                        </button>
+                    </li>
+                    <li class="flex ai-center jc-between">
+                        <a href="#">매거진</a>
+                        <button class="gnb-toggle" aria-expanded="false">
+                            <span class="icon-arrow" aria-hidden="true"></span>
+                        </button>
+                    </li>
+                </ul>
             </nav>
+            <div class="follow-us">
+                <p>Follow-Us</p>
+                <div class="sns flex ai-center">
+                    <a href="#"><img src="img/sns/facebook.svg" alt=""></a>
+                    <a href="#"><img src="img/sns/twitter.svg" alt=""></a>
+                    <a href="#"><img src="img/sns/youtube.svg" alt=""></a>
+                </div>
+            </div>
         </div>
     </header>
     <main>
-        <!-- ================= 메인 섹션 ================= -->
-        <section class="hero-section">
+        <!-- ======================== 히로 섹션 ======================== -->
+        <section class="hero-section mo-only">
             <div class="inner">
-                <div class="hero-container flex">
-                    <div class="hero-content hero-img">
-                        <img src="img/hero/hero01.png" alt="Häagen-Dazs 아이스크림 이미지">
-                    </div>
-                    <div class="hero-content hero-text-content flex">
-                        <div class="sub-content flex">
-                            <div class="hero-subimg">
-                                <img src="img/hero/hero02.png" alt="Häagen-Dazs 제품 이미지">
-                            </div>
-                            <p class="hero-description">
-                                A little luxury in every bite.<br>
-                                Smooth, creamy, unforgettable.<br>
-                                This is Häagen-Dazs.
-                            </p>
-                            <h2 class="hero-title">Häagen-Dazs</h2>
-                        </div>
-                    </div>
+                <div class="img-wrap"></div>
+            </div>
+            <div class="hero-badge-wrap">
+                <div data-aos="fade-left" data-aos-duration="1200">
+                    <ul class="hero-badge-list flex ai-center jc-between">
+                        <li>
+                            <article>
+                                <a href="#">
+                                    <img src="img/hero/hero-badge01.svg" alt="">
+                                </a>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <a href="#">
+                                    <img src="img/hero/hero-badge02.svg" alt="">
+                                </a>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <a href="#">
+                                    <img src="img/hero/hero-badge03.svg" alt="">
+                                </a>
+                            </article>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
-        <!-- ================= 신제품 섹션 ================= -->
-        <section class="new-section">
+        <!-- ======================== 프로모션 섹션 ======================== -->
+        <section class="promotion-section">
             <div class="inner">
-                <div class="item-slide-wrap explore-text-wrap">
-                    <div class="text-slide">
-                        <div class="text-wrap">
-                            <h2>Decadent flavors made to be savored</h2>
-                            <a href="#" aria-label="신제품 보기">Explore Now</a>
-                        </div>
-                    </div>
-                    <div class="item-slide">
-                        <a href="#">
-                            <div class="item-img">
-                                <img src="img/new-product/new01.png" alt="">
-                            </div>
-                            <div class="item-info flex jc-between">
-                                <p class="item-type">BAR</p>
-                                <h3 class="item-name">Salted Caramel Macadamia Bar</h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item-slide">
-                        <a href="#">
-                            <div class="item-img">
-                                <img src="img/new-product/new02.png" alt="">
-                            </div>
-                            <div class="item-info flex jc-between">
-                                <p class="item-type">ICE CREAM</p>
-                                <h3 class="item-name">Salted Brown Butter Cookie</h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item-slide">
-                        <a href="#">
-                            <div class="item-img">
-                                <img src="img/new-product/new03.png" alt="">
-                            </div>
-                            <div class="item-info flex jc-between">
-                                <p class="item-type">SORBET</p>
-                                <h3 class="item-name">Summer Blueberry & Lemon Sorbet</h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item-slide">
-                        <a href="#">
-                            <div class="item-img">
-                                <img src="img/new-product/new04.png" alt="">    
-                            </div>
-                            <div class="item-info flex jc-between">
-                                <p class="item-type">SORBET</p>
-                                <h3 class="item-name">Vanilla Salted Caramel Cone</h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="text-slide">
-                        <div class="text-wrap discover-text-wrap">
-                            <h2>Want to see more?</h2>
-                            <a href="#" aria-label="신제품 보기">Discover More</a>
-                        </div>
-                    </div>
+                <div class="section-header flex jc-between ai-center">
+                    <h2>
+                        <a href="#">PROMOTION</a>
+                    </h2>
+                    <a href="#" class="show-more-btn">SHOW MORE</a>
                 </div>
-            </div>
-        </section>
-        <!-- ================= 브랜드 스토리 섹션 ================= -->
-        <section class="brand-story-section">
-            <div class="inner">
-                <div class="story-text-wrap flex">
-                    <h4>A RICH HISTORY</h4>
-                    <h3>Best enjoyed slowly but surely</h3>
-                    <p>Starting with three simple flavors</p>
-                    <a href="#" class="learn-more-btn">LEARN MORE</a>
-                </div>
-            </div>
-        </section>
-        <!-- ================= 레시피 섹션 ================= -->
-        <section class="recipes-section">
-            <div class="inner">
-                <div class="recipes-slide-wrap">
-                    <div class="text-slide">
-                        <div class="text-wrap">
-                            <h2>Taste the Art</h2>
-                            <a href="#" aria-label="레시피 더보기">Explore Now</a>
-                        </div>
-                    </div>
-                    <div class="item-slide">
-                        <a href="#">
-                            <div class="item-img">
-                                <img src="img/recipes/recipe01.png" alt="Dulche De Leche Ice Cream Pie 레시피">
-                            </div>
-                            <div class="item-info flex">
-                                <h3 class="item-name">Dulche De Leche Ice Cream Pie</h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item-slide">
-                        <a href="#">
-                            <div class="item-img">
-                                <img src="img/recipes/recipe02.png" alt="Warm Apple Cinnamon 레시피">
-                            </div>
-                            <div class="item-info flex">
-                                <h3 class="item-name">Warm Apple Cinnamon</h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item-slide">
-                        <a href="#">
-                            <div class="item-img">
-                                <img src="img/recipes/recipe03.png" alt="Chocolate Ice Cream Cupcakes 레시피">
-                            </div>
-                            <div class="item-info flex">
-                                <h3 class="item-name">Chocolate Ice Cream Cupcakes</h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item-slide">
-                        <a href="#">
-                            <div class="item-img">
-                                <img src="img/recipes/recipe04.png" alt="Mango Ginger Fizz Mocktail 레시피">
-                            </div>
-                            <div class="item-info flex">
-                                <h3 class="item-name">Mango Ginger Fizz Mocktail</h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item-slide">
-                        <a href="#">
-                            <div class="item-img">
-                                <img src="img/recipes/recipe05.png" alt="Vanilla Ice Cream Brownie Bars 레시피">
-                            </div>
-                            <div class="item-info flex">
-                                <h3 class="item-name">Vanilla Ice Cream Brownie Bars</h3>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ================= 매장 섹션 ================= -->
-        <section class="store-section">
-            <div class="inner flex">
-                <div class="store-img">
-                    <img src="img/shop.jpeg" alt="">
-                </div>
-                <ul class="store-list flex jc-between">
-                    <li class="flex jc-between ai-center">
-                        <div class="store-info">
-                            <h3 class="store-name">Orlando Vineland Premium Outlets</h3>
-                            <p class="store-address">8200 Vineland Ave, Orlando, FL 32821</p>
-                        </div>
-                        <button class="more-btn flex ai-center" aria-label="매장 정보 자세히 보기">+</ㅠ>
+                <ul class="promotion-slide-wrap">
+                    <li>
+                        <article>
+                            <a href="#">
+                                <div class="thumb-wrap"><img src="img/promotion/promotion01.jpg" alt=""></div>
+                                <div class="content-desc">
+                                    <h3 class="content-title">행운의 당첨자 혜택</h3>
+                                    <span class="content-date">2025.10.01 ~ 2025.12.20</span>
+                                </div>
+                            </a>
+                        </article>
                     </li>
-                    <li class="flex jc-between ai-center">
-                        <div class="store-info">
-                            <h3 class="store-name">Borgata Casino</h3>
-                            <p class="store-address">1 Borgata Way, Atlantic City, NJ 08401</p>
-                        </div>
-                        <button class="more-btn flex ai-center" aria-label="매장 정보 자세히 보기">+</ㅠ>
+                    <li>
+                        <article>
+                            <a href="#">
+                                <div class="thumb-wrap"><img src="img/promotion/promotion02.jpg" alt=""></div>
+                                <div class="content-desc">
+                                    <h3 class="content-title">연말을 완성하는 하겐다즈 홀리데이 컬렉션</h3>
+                                    <span class="content-date">2025.12.01 ~ 2025.12.30</span>
+                                </div>
+                            </a>
+                        </article>
                     </li>
-                    <li class="flex jc-between ai-center">
-                        <div class="store-info">
-                            <h3 class="store-name">City Creek Center</h3>
-                            <p class="store-address">50 S Main St, Salt Lake City, UT 84101</p>
-                        </div>
-                        <button class="more-btn flex ai-center" aria-label="매장 정보 자세히 보기">+</ㅠ>
+                    <li>
+                        <article>
+                            <a href="#">
+                                <div class="thumb-wrap"><img src="img/promotion/promotion03.jpg" alt=""></div>
+                                <div class="content-desc">
+                                    <h3 class="content-title">특별한 순간을 위한 한정 홀리데이 디저트</h3>
+                                    <span class="content-date">2025.12.10 ~ 2025.12.30</span>
+                                </div>
+                            </a>
+                        </article>
                     </li>
-                    <li class="flex jc-between ai-center">
-                        <div class="store-info">
-                            <h3 class="store-name">Anchorage Village</h3>
-                            <p class="store-address">345 W 104th Ave, Anchorage, AK 99515</p>
-                        </div>
-                        <button class="more-btn flex ai-center" aria-label="매장 정보 자세히 보기">+</ㅠ>
+                    <li>
+                        <article>
+                            <a href="#">
+                                <div class="thumb-wrap"><img src="img/promotion/promotion04.jpg" alt=""></div>
+                                <div class="content-desc">
+                                    <h3 class="content-title">새롭게 만나는 민트 초콜릿</h3>
+                                    <span class="content-date">2025.10.01 ~ 2025.12.30</span>
+                                </div>
+                            </a>
+                        </article>
                     </li>
-                    <li class="flex jc-between ai-center">
-                        <div class="store-info">
-                            <h3 class="store-name">Chandler Fashion Center</h3>
-                            <p class="store-address">3111 W Chandler Blvd, Chandler, AZ 85226</p>
-                        </div>
-                        <button class="more-btn flex ai-center" aria-label="매장 정보 자세히 보기">+</ㅠ>
+                    <li>
+                        <article>
+                            <a href="#">
+                                <div class="thumb-wrap"><img src="img/promotion/promotion05.jpg" alt=""></div>
+                                <div class="content-desc">
+                                    <h3 class="content-title">아웃백에서 완성되는 하겐다즈 케이크</h3>
+                                    <span class="content-date">2025.12.12 ~ 2025.12.30</span>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <a href="#">
+                                <div class="thumb-wrap"><img src="img/promotion/promotion06.jpg" alt=""></div>
+                                <div class="content-desc">
+                                    <h3 class="content-title">하겐다즈 × Galaxy Buds Pro 스페셜 콜라보</h3>
+                                    <span class="content-date">2025.10.01 ~ 2025.12.30</span>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <a href="#">
+                                <div class="thumb-wrap"><img src="img/promotion/promotion07.jpg" alt=""></div>
+                                <div class="content-desc">
+                                    <h3 class="content-title">숨겨진 하겐다즈 로고를 찾아라</h3>
+                                    <span class="content-date">2025.11.01 ~ 2025.12.30</span>
+                                </div>
+                            </a>
+                        </article>
                     </li>
                 </ul>
+            </div>
+        </section>
+        <!-- ======================== 신제품 섹션 ======================== -->
+        <section class="new-section">
+            <div class="inner">
+                <div class="sr-only section-header flex jc-between ai-center">
+                    <h2>
+                        <a href="#">시즌 신제품</a>
+                    </h2>
+                    <a href="#" class="show-more-btn">SHOW MORE</a>
+                </div>
+                <h3>새로운 맛, 올 겨울 한정</h3>
+                <div class="new-slide-wrap">
+                    <div class="new-slide">
+                        <ul class="new-slide-list flex">
+                            <li>
+                                <a href="#">
+                                    <figure>
+                                        <div class="img-wrap">
+                                            <img src="img/new/new_tub01.png" alt="">
+                                        </div>
+                                        <figcaption>마다가스카르 바닐라 파인트</figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <figure>
+                                        <div class="img-wrap">
+                                            <img src="img/new/new_tub02.png" alt="">
+                                        </div>
+                                        <figcaption>스트로베리 바닐라 파인트</figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <figure>
+                                        <div class="img-wrap">
+                                            <img src="img/new/new_tub03.png" alt="">
+                                        </div>
+                                        <figcaption>다크 초콜릿 바닐라 파인트</figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <figure>
+                                        <div class="img-wrap">
+                                            <img src="img/new/new_tub04.png" alt="">
+                                        </div>
+                                        <figcaption>스트로베리 바닐라 파인트</figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="new-slide">
+                        <ul class="new-slide-list flex">
+                            <li>
+                                <a href="#">
+                                    <figure>
+                                        <div class="img-wrap">
+                                            <img src="img/new/new_bar01.png" alt="">
+                                        </div>
+                                        <figcaption>쿠키 앤 크림 스틱바</figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <figure>
+                                        <div class="img-wrap">
+                                            <img src="img/new/new_bar02.png" alt="">
+                                        </div>
+                                        <figcaption>망고 바닐라 크림 스틱바</figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <figure>
+                                        <div class="img-wrap">
+                                            <img src="img/new/new_bar03.png" alt="">
+                                        </div>
+                                        <figcaption>솔티드 카라멜 스틱바</figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="new-slide">
+                        <ul class="new-slide-list flex">
+                            <li>
+                                <a href="#">
+                                    <figure>
+                                        <div class="img-wrap">
+                                            <img src="img/new/new_pack01.png" alt="">
+                                        </div>
+                                        <figcaption>베리 미니 컵 멀티팩</figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <figure>
+                                        <div class="img-wrap">
+                                            <img src="img/new/new_pack02.png" alt="">
+                                        </div>
+                                        <figcaption>초코 미니 컵 멀티팩</figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <figure>
+                                        <div class="img-wrap">
+                                            <img src="img/new/new_pack03.png" alt="">
+                                        </div>
+                                        <figcaption>바닐라 미니 컵 멀티팩</figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======================== 브랜드 컨텐츠 섹션 ======================== -->
+        <section class="brand-content-section">
+            <div class="inner">
+                <div class="section-header flex jc-between ai-center">
+                    <h2>
+                        <a href="#">HD CONTENT</a>
+                    </h2>
+                    <a href="#" class="show-more-btn">SHOW MORE</a>
+                </div>
+                <ul class="content-list grid">
+                    <li>
+                        <article>
+                            <a href="#" class="flex jc-between">
+                                <div class="thumb-wrap">
+                                    <img src="img/contents/content01.svg" alt="">
+                                </div>
+                                <div class="content-desc">
+                                    <div class="content-type">BRAND VIDEO</div>
+                                    <h3 class="content-title">한 스푼의 여유를 담은 달콤한 순간</h3>
+                                    <p class="content-text">부드럽게 녹아내리는 크림과 깊이 있는 풍미가 조화롭게 어우러져, 복잡한 일상 속에서도 잠시 멈춰 천천히 즐길 수 있는 달콤한 휴식을 전합니다. 한 입마다 편안한 여운이 오래 남습니다.</p>
+                                    <p class="content-date">2025.01.01</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <a href="#" class="flex jc-between">
+                                <div class="thumb-wrap">
+                                    <img src="img/contents/content02.svg" alt="">
+                                </div>
+                                <div class="content-desc">
+                                    <div class="content-type">BRAND VIDEO</div>
+                                    <h3 class="content-title">진한 맛이 완성되는 깊은 균형의 시간</h3>
+                                    <p class="content-text">선명하게 느껴지는 첫 맛과 부드럽게 이어지는 마무리가 균형을 이루며, 과하지 않은 달콤함으로 깊이 있는 풍미를 완성합니다. 마지막 한 스푼까지 안정적인 만족감을 선사합니다.</p>
+                                    <p class="content-date">2025.01.01</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <a href="#" class="flex jc-between">
+                                <div class="thumb-wrap">
+                                    <img src="img/contents/content03.svg" alt="">
+                                </div>
+                                <div class="content-desc">
+                                    <div class="content-type">BRAND VIDEO</div>
+                                    <h3 class="content-title">천천히 음미하며 느끼는 풍미의 깊이</h3>
+                                    <p class="content-text">섬세하게 쌓아 올린 맛의 결이 입안에서 차분히 펼쳐지며, 서두르지 않아도 충분한 밀도로 풍부한 풍미를 전합니다. 여운은 자연스럽게 길게 이어집니다.</p>
+                                    <p class="content-date">2025.01.01</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <a href="#" class="flex jc-between">
+                                <div class="thumb-wrap">
+                                    <img src="img/contents/content04.svg" alt="">
+                                </div>
+                                <div class="content-desc">
+                                    <div class="content-type">BRAND VIDEO</div>
+                                    <h3 class="content-title">취향을 채워주는 단 하나의 달콤한 선택</h3>
+                                    <p class="content-text">익숙하지만 새롭게 느껴지는 조합으로 누구에게나 편안하게 다가가며, 매 순간 안정적인 밸런스를 유지하는 달콤함을 완성합니다. 부담 없이 오래 즐길 수 있습니다.</p>
+                                    <p class="content-date">2025.01.01</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- ======================== 레시피 섹션 ======================== -->
+        <section class="recipes-section">
+            <div class="inner">
+                <div class="section-header flex jc-between ai-center">
+                    <h2>
+                        <a href="#">RECIPES</a>
+                    </h2>
+                    <a href="#" class="show-more-btn">SHOW MORE</a>
+                </div>
+                <ul class="recipes-list flex jc-between">
+                    <li>
+                        <article>
+                            <a href="#">
+                                <figure>
+                                    <div class="thumb-wrap">
+                                        <img src="img/recipes/recipe01.png" alt="돌체드레체 아이스크림 파이 이미지">
+                                    </div>
+                                    <figcaption class="content-desc">
+                                        <h3 class="content-title">돌체드레체 아이스크림 파이</h3>
+                                        <p class="content-text">부드러운 아이스크림과 달콤한 파이 조합</p>
+                                        <p class="content-text"><i class="fa-regular fa-clock" aria-label="조리시간"></i>10m</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <a href="#">
+                                <figure>
+                                    <div class="thumb-wrap">
+                                        <img src="img/recipes/recipe02.png" alt="스트로베리 바닐라 아이스크림 파이 이미지">
+                                    </div>
+                                    <figcaption class="content-desc">
+                                        <h3 class="content-title">스트로베리 바닐라 아이스크림 파이</h3>
+                                        <p class="content-text">상큼한 딸기와 부드러운 바닐라의 완벽한 조합</p>
+                                        <p class="content-text"><i class="fa-regular fa-clock" aria-label="조리시간"></i>12m</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <a href="#">
+                                <figure>
+                                    <div class="thumb-wrap">
+                                        <img src="img/recipes/recipe03.png" alt="다크 초콜릿 아이스크림 파이 이미지">
+                                    </div>
+                                    <figcaption class="content-desc">
+                                        <h3 class="content-title">다크 초콜릿 아이스크림 파이</h3>
+                                        <p class="content-text">진하고 풍부한 초콜릿과 부드러운 아이스크림의 조화</p>
+                                        <p class="content-text"><i class="fa-regular fa-clock" aria-label="조리시간"></i>15m</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <a href="#">
+                                <figure>
+                                    <div class="thumb-wrap">
+                                        <img src="img/recipes/recipe04.png" alt="돌체드레체 아이스크림 치즈케이크 이미지">
+                                    </div>
+                                    <figcaption class="content-desc">
+                                        <h3 class="content-title">돌체드레체 아이스크림 치즈케이크</h3>
+                                        <p class="content-text">부드러운 치즈케이크와 아이스크림이 만나 달콤함 극대화</p>
+                                        <p class="content-text"><i class="fa-regular fa-clock" aria-label="조리시간"></i>20m</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- ======================== 매장 섹션 ======================== -->
+        <section class="store-section">
+            <div class="inner">
+                <div class="section-header flex jc-between ai-center">
+                    <h2>
+                        <a href="#">HD STORE</a>
+                    </h2>
+                    <a href="#" class="show-more-btn">SHOW MORE</a>
+                </div>
+                <div class="flex">
+                    <div class="store-img">
+                        <img src="img/shop.jpeg" alt="">
+                    </div>
+                    <ul class="store-list flex jc-between">
+                        <li class="flex jc-between ai-center">
+                            <div class="store-info">
+                                <h3 class="store-name">하겐다즈 판교점</h3>
+                                <p class="store-address">경기도 성남시 백현동 535</p>
+                            </div>
+                            <button class="more-btn flex ai-center" aria-label="매장 정보 자세히 보기">+</ㅠ>
+                        </li>
+                        <li class="flex jc-between ai-center">
+                            <div class="store-info">
+                                <h3 class="store-name">하겐다즈 교대점</h3>
+                                <p class="store-address">서울특별시 서초구 서초4동 서초중앙로 188</p>
+                            </div>
+                            <button class="more-btn flex ai-center" aria-label="매장 정보 자세히 보기">+</ㅠ>
+                        </li>
+                        <li class="flex jc-between ai-center">
+                            <div class="store-info">
+                                <h3 class="store-name">하겐다즈 서초점</h3>
+                                <p class="store-address">서울특별시 서초구 서초대로38길 12</p>
+                            </div>
+                            <button class="more-btn flex ai-center" aria-label="매장 정보 자세히 보기">+</ㅠ>
+                        </li>
+                        <li class="flex jc-between ai-center">
+                            <div class="store-info">
+                                <h3 class="store-name">하겐다즈 여의도점</h3>
+                                <p class="store-address">서울특별시 영등포구 여의동 의사당대로 108</p>
+                            </div>
+                            <button class="more-btn flex ai-center" aria-label="매장 정보 자세히 보기">+</ㅠ>
+                        </li>
+                        <li class="flex jc-between ai-center">
+                            <div class="store-info">
+                                <h3 class="store-name">하겐다즈 분당미금점</h3>
+                                <p class="store-address">경기도 성남시 금곡동 168</p>
+                            </div>
+                            <button class="more-btn flex ai-center" aria-label="매장 정보 자세히 보기">+</ㅠ>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
-    <!-- ================= 푸터 섹션 ================= -->
-    <footer class="footer-section">
-        <div class="inner flex jc-between">
-            <!-- <div class="logo-img">
-                <img src="img/footer-logo.svg" alt="footer-logo">
-            </div> -->
-            <div class="footer-links">
-                <h4 class="footer-title">LEARN MORE</h4>
-                <ul class="flex links-wrap">
-                    <li><a href="#" class="footer-link">FAQ</a></li>
-                    <li><a href="#" class="footer-link">Privacy</a></li>
-                    <li><a href="#" class="footer-link">Accessibility</a></li>
-                    <li><a href="#" class="footer-link">Sitemap</a></li>
-                    <li><a href="#" class="footer-link">Terms & Conditions</a></li>
-                    <li><a href="#" class="footer-link">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-social">
-                <h4 class="footer-title">Connect With Us</h4>
-                <ul class="social-links flex">
-                    <li>
-                        <a href="#"><img src="img/sns/facebook_icon.svg" alt="Facebook"></a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/sns/twitter_icon.svg" alt="Twitter">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="img/sns/youtube-icon.svg" alt="Youtube"></a>
-                    </li>
-                </ul>
+    <!-- ======================== 푸터 섹션 ======================== -->
+    <footer>
+        <div class="inner flex">
+            <ul class="bottom-util flex">
+                <li><a href="#">영상정보처리기기 운영·관리방침</a></li>
+                <li><a href="#"><em>개인정보처리방침</em></a></li>
+                <li><a href="#">멤버스 이용약관</a></li>
+                <li><a href="#">가맹 안내</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">매장운영 통합시스템(가맹 점주용)</a></li>
+            </ul>
+            <div class="bottom-meta flex">
+                <div class="footer-logo">
+                    <img src="img/logo.svg" alt="하겐다즈 로고">
+                </div>
+                <div class="copy-info">
+                    <address class="company-info">
+                        <span>서울특별시 강남구 청담동 은성빌딩 7층</span>
+                        <span class="tel">TEL : <a href="tel:025088500">02-508-8500</a></span>
+                    </address>
+                    <p><span>사업자등록번호 : 106-81-28964</span></p>
+                </div>
             </div>
         </div>
     </footer>
@@ -297,6 +608,13 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Slick JS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- aos 라이브러리 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
     <script src="main.js"></script>
 </body>
 </html>

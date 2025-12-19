@@ -1,0 +1,133 @@
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+.inner {
+    width: 85%;
+    height: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.flex {
+    display: flex;
+}
+.grid {
+    display: grid;
+}
+.jc-between {
+    justify-content: space-between
+}
+.ai-center {
+    align-items: center;
+}
+
+/* ================= 섹션 헤더 타이틀 ================= */
+.section-header {
+    margin-bottom: 4rem;
+}
+.section-header h2 {
+    font-size: 2rem;
+}
+.section-header .show-more-btn {
+    display: block;
+    font-size: .85rem;
+    font-weight: 500;
+    border-bottom: 1px solid #000;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+}
+
+/* ================= 컨텐츠 컴포넌트 ================= */
+.content-list {
+    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+.content-list a {
+    gap: 1.5rem;
+    align-items: start;
+    color: #232323;
+}
+.thumb-wrap {
+    overflow: hidden;
+    border-radius: 10px;
+}
+.thumb-wrap::after {
+    content: '';
+    position: absolute;
+    inset: auto auto 0 0;
+    width: 100%;
+    height: 50%;
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.3));
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.thumb-wrap:hover::after {
+    height: 100%;
+    opacity: 1;
+}
+.thumb-wrap img {
+    object-fit: cover;
+}
+.content-desc {
+    width: 100%;
+    padding: .6rem;
+    color: #3E2523;
+}
+.content-title {
+    margin-top: 8px;
+}
+.content-type {
+    font-size: .8rem;
+}
+.content-text {
+    margin-bottom: 20px;
+    font-size: .9rem;
+    line-height: 1.65;
+    text-align: justify;
+    color: #4a4a4a;
+}
+.content-date {
+    display: block;
+    margin-top: 8px;
+    font-size: .8rem;
+    letter-spacing: .04em;
+    color: #555;
+}
+
+/* ================= slick slider 화살표 이동 버튼 ================= */
+.slick-slider .slick-prev:before,
+.slick-slider .slick-next:before {
+    font-size: 35px;
+    color: #3E2523;
+}
+
+/* ================= slick slider 하단 도트 ================= */
+.slick-initialized li {
+    margin: 1rem;
+}
+.slick-initialized .slick-prev {
+    left: -40px;
+}
+.slick-initialized .slick-prev, 
+.slick-initialized .slick-next {
+    top: 40%;
+}
+.slick-initialized .slick-dots {
+    bottom: -90px;
+}
+.slick-initialized .slick-dots li {
+    margin: 0 10px;
+}
+.slick-initialized .slick-dots li button:before {
+    font-size: .9rem;
+}
+.slick-initialized .slick-dots li.slick-active button:before {
+    color: #3E2523;
+}

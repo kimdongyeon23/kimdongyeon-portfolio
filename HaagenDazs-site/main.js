@@ -1,9 +1,22 @@
-// ================= 모든 a 태그 기본 이동 동작 막기 =================
+// ======================== 모든 a 태그 기본 이동 동작 막기 ========================
 $('a').on('click', function(event) {
     event.preventDefault();
 });
 
-// ================= 헤더 스크롤 =================
+// ======================== 헤더 높이 변수 설정 ======================== 
+$(function () {
+    const $header = $('header');
+
+    function setHeaderHeight() {
+        const h = $header.outerHeight();
+        document.documentElement.style.setProperty('--header-height', h + 'px');
+    }
+
+    setHeaderHeight();
+    $(window).on('resize', setHeaderHeight);
+});
+
+// ======================== 헤더 스크롤 ======================== 
 $(function() {
     $(window).on("scroll", function() {
         let scrollTop = $(this).scrollTop();
@@ -16,11 +29,11 @@ $(function() {
     });
 });
 
-// ================= 반응형 헤더 오버레이 탭 =================
+// ======================== header 반응형 오버레이 탭 ======================== 
 $(function() {
     const $tabWrap = $(".tab-wrap");
     const $overlay = $(".overlay");
-    const $tabBtn = $(".overlay-toggle-btn");
+    const $tabBtn = $(".tab-open-btn");
 
     $tabBtn.on("click", function() {
         $(this).toggleClass("open");
@@ -37,50 +50,50 @@ $(function() {
     });
 });
 
-// ================= 신제품 슬릭 슬라이더 =================
+// ======================== 프로모션 섹션 slick slider ========================
 $(document).ready(function(){
-    $('.item-slide-wrap').slick({
-        slidesToShow: 4.2,       
-        slidesToScroll: 4,     
-        infinite: false,        
-        dots: false,                    
-        responsive: [         
+    $('.promotion-slide-wrap').slick({
+        slidesToShow: 5,
+        slidesToScroll: 3,     
+        speed: 1000,   
+        infinite: false, 
+        dots: true,
+        responsive: [
             {
-                breakpoint: 1025,
-                settings: { slidesToShow: 3.2, slidesToScroll: 3 }
+            breakpoint: 1300,
+            settings: {
+                slidesToShow: 4
+            }
             },
             {
-                breakpoint: 770,
-                settings: { slidesToShow: 2.2, slidesToScroll: 2 }
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3
+            }
             },
             {
-                breakpoint: 482,
-                settings: { slidesToShow: 1.3, slidesToScroll: 1 }
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1     
+            }
+            },
+            {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1     
+            }
             }
         ]
-    });
+    })
 });
 
-// ================= 레시피 슬릭 슬라이더 =================
+// ======================== 신제품 섹션 slick slider ========================
 $(document).ready(function(){
-    $('.recipes-slide-wrap').slick({
-        slidesToShow: 4.2,       
-        slidesToScroll: 4,     
-        infinite: false,        
-        dots: false,                    
-        responsive: [         
-            {
-                breakpoint: 1025,
-                settings: { slidesToShow: 3.2, slidesToScroll: 3 }
-            },
-            {
-                breakpoint: 770,
-                settings: { slidesToShow: 2.2, slidesToScroll: 2 }
-            },
-            {
-                breakpoint: 482,
-                settings: { slidesToShow: 1.3, slidesToScroll: 1 }
-            }
-        ]
+    $('.new-slide-wrap').slick({
+        slidesToShow: 1,            
+        dots: true,
+        speed: 1000   
     });
 });

@@ -1,14 +1,19 @@
-@media (max-width: 1500px){
-    html {
-        font-size: 15px;
+@media (max-width: 1500px) {
+    .hero-heading {
+        padding-top: 18vh;
     }
-    section {
-        padding: 100px 0;
+    .hero-heading h1 {
+        font-size: 9rem;
     }
-    section .inner {
-        width: 85%;
+    .hero-heading span {
+        font-size: 2.6rem;
     }
-    .about-date {
-        width: 170px;
+    .hero-img {
+        bottom: -35%;
+    }
+}
+@media (max-width: 1300px) {
+    .hero-heading {
+        flex-direction: column;
     }
 }

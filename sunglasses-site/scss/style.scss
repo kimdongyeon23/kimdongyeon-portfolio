@@ -231,12 +231,13 @@ header {
     font-size: $font-xs;
 
     p {
-        margin: 0 0 10px 10px;
+        margin: 0 0 8px 10px;
     }
 
     i::before {
         display: block;
         width: 25px;
+        margin-top: 4px;
     }
 }
 

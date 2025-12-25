@@ -84,7 +84,7 @@ main section {
 
 .section-title {
   display: block;
-  margin-bottom: 4vh;
+  margin-bottom: 4.4vh;
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 1.4em;
@@ -378,11 +378,12 @@ header {
   font-size: 0.8rem;
 }
 .store-address p {
-  margin: 0 0 10px 10px;
+  margin: 0 0 8px 10px;
 }
 .store-address i::before {
   display: block;
   width: 25px;
+  margin-top: 4px;
 }
 
 /* ========== footer section =========== */

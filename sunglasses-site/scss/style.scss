@@ -28,11 +28,12 @@ header {
     a {
         display: block;
         padding: 0 .3rem;
-        font-weight: 500;
+        font-size: $font-sm;
     }
 }
 .user-menu a {
-    padding: .6rem;
+    padding: .4rem;
+    font-size: $font-xs;
     color: #444;
 }
 .head-user-menu {
@@ -75,7 +76,8 @@ header {
 
     .shape-label {
         margin-bottom: 1.5rem;
-        font-size: $font-base;
+        font-size: $font-sm;
+        font-weight: 500;
         color: #666;
     }
 
@@ -120,8 +122,8 @@ header {
     border-bottom: .5px solid #eaeaea;
 
     button {
-        width: 18px;
-        margin: 5px;
+        width: 16px;
+        margin: 4px;
     }
 }
 .best-sec .product-info {
@@ -186,14 +188,18 @@ header {
 }
 .lookbook-sec .info-wrap {
     .brand-area {   
-        padding: .7rem 0;
+        padding: .4rem 0;
         
         p {
-            font-weight: bold;
+            @include brand-link-mix;
+        }
+        span {
+            @include brand-link-mix;
         }
     }
     .collection-name {
-        font-size: $font-base;
+        font-size: $font-sm;
+        font-weight: 500;
     }
 }
 
@@ -213,16 +219,16 @@ header {
     }
 }
 .store-info {
-    padding: .8rem 1rem;
+    padding: .6rem 1rem;
 
     h3 {
-        font-size: $font-lg;
-        font-weight: 600;
+        font-size: $font-base;
+        font-weight: 500;
         margin-bottom: 1rem;
     }
 }
 .store-address {
-    font-size: $font-base;
+    font-size: $font-xs;
 
     p {
         margin: 0 0 10px 10px;

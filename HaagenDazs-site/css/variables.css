@@ -101,6 +101,9 @@
     color: #555;
 }
 
+.slick-slide {
+    -webkit-transform: translate3d(0, 0, 0);
+}
 /* ================= slick slider 화살표 이동 버튼 ================= */
 .slick-slider .slick-prev:before,
 .slick-slider .slick-next:before {

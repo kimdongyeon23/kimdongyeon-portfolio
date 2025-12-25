@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 *, *::before, *::after {
   padding: 0;
   margin: 0;
@@ -6,21 +5,20 @@
 }
 
 body {
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", monospace;
   color: #222;
 }
 
 img {
   width: 100%;
-  margin-bottom: -4px;
+  height: auto;
+  vertical-align: middle;
 }
 
 a {
   color: inherit;
   text-decoration: none;
   background-color: transparent;
-  cursor: pointer;
-  outline: none;
 }
 
 button {
@@ -29,13 +27,26 @@ button {
   background: none;
 }
 
+li {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
 main section {
   padding: 7rem 0 7rem;
   border-bottom: 1px solid #d9d9d9;
-}
-
-li {
-  list-style: none;
 }
 
 .sr-only {
@@ -74,17 +85,14 @@ li {
 .section-title {
   display: block;
   margin-bottom: 4vh;
-  font-weight: 600;
-  font-size: 1.8rem;
+  font-weight: 400;
+  font-size: 1.5rem;
   line-height: 1.4em;
-  color: #444;
 }
-
 .section-title span {
   margin-left: 8px;
   font-weight: 100;
   font-size: 1.5rem;
-  color: #555;
 }
 
 .swiper {
@@ -131,11 +139,12 @@ header {
 .gnb-menu a {
   display: block;
   padding: 0 0.3rem;
-  font-weight: 500;
+  font-size: 0.9rem;
 }
 
 .user-menu a {
-  padding: 0.6rem;
+  padding: 0.4rem;
+  font-size: 0.8rem;
   color: #444;
 }
 
@@ -178,7 +187,8 @@ header {
 }
 .shape-slider .shape-label {
   margin-bottom: 1.5rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
   color: #666;
 }
 .shape-slider .item-box:hover {
@@ -222,8 +232,8 @@ header {
   border-bottom: 0.5px solid #eaeaea;
 }
 .best-sec .icon-wrap button {
-  width: 18px;
-  margin: 5px;
+  width: 16px;
+  margin: 4px;
 }
 
 .best-sec .product-info {
@@ -234,14 +244,17 @@ header {
   font-size: 0.9rem;
 }
 .best-sec .product-info .item-name {
-  margin: 0.5rem 0;
+  margin: 0.4rem 0;
+  font-size: 0.9rem;
+  font-weight: 300;
   color: #666;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 .best-sec .product-info .item-price {
-  font-weight: bold;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 /* =========== recommend section =========== */
@@ -301,14 +314,17 @@ header {
   font-size: 0.9rem;
 }
 .recommend-slider .product-info .item-name {
-  margin: 0.5rem 0;
+  margin: 0.4rem 0;
+  font-size: 0.9rem;
+  font-weight: 300;
   color: #666;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 .recommend-slider .product-info .item-price {
-  font-weight: bold;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 /* =========== lookbook section ===========  */
@@ -322,13 +338,17 @@ header {
 }
 
 .lookbook-sec .info-wrap .brand-area {
-  padding: 0.7rem 0;
+  padding: 0.4rem 0;
 }
 .lookbook-sec .info-wrap .brand-area p {
-  font-weight: bold;
+  font-size: 0.9rem;
+}
+.lookbook-sec .info-wrap .brand-area span {
+  font-size: 0.9rem;
 }
 .lookbook-sec .info-wrap .collection-name {
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 /* =========== store-sec =========== */
@@ -346,16 +366,16 @@ header {
 }
 
 .store-info {
-  padding: 0.8rem 1rem;
+  padding: 0.6rem 1rem;
 }
 .store-info h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 500;
   margin-bottom: 1rem;
 }
 
 .store-address {
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 .store-address p {
   margin: 0 0 10px 10px;

@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Häagen-Dazs</title>
     <!-- reset css -->
     <link rel="stylesheet" href="./css/reset.css">
     <!-- 컴포넌트 css -->
     <link rel="stylesheet" href="./css/variables.css">
-    <!-- 슬릭 슬라이더 기본 스타일 -->
+    <!-- 라이브러리 css -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <!-- 슬릭 슬라이더 테마 스타일 -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <!-- aos 라이브러리 -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
     <!-- main css -->
     <link rel="stylesheet" href="./css/main.css">
     <!-- 반응형 css -->
     <link rel="stylesheet" href="./css/responsive.css">
-    <title>Häagen-Dazs</title>
 </head>
 <body> 
     <!-- ======================== 헤더 섹션 ======================== -->
@@ -60,7 +59,7 @@
             <button class="tab-open-btn ai-center" aria-label="탭 열기">≡</button>
         </div>
         <div class="overlay"></div>
-        <div class="tab-wrap" aria-hidden="false">
+        <div class="tab-wrap" aria-hidden="false" aria-expanded="false">
             <nav class="mo-only">
                 <ul class="gnb">
                     <li class="flex ai-center jc-between">

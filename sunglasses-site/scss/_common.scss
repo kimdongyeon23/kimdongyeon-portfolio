@@ -1,3 +1,7 @@
+main section {
+    padding: 7rem 0 7rem;
+    border-bottom: 1px solid #d9d9d9;
+}
 .sr-only {
     position: absolute;
     width: 1px;
@@ -28,16 +32,15 @@
 .section-title {
     display: block;
     margin-bottom: 4vh;
-    font-weight: 600;
-    font-size: 1.8rem;
-    line-height: 1.4em;
-    color: #444;
-}
-.section-title span {
-    margin-left: 8px;
-    font-weight: 100;
+    font-weight: 400;
     font-size: 1.5rem;
-    color: #555;
+    line-height: 1.4em;
+    
+    span {
+        margin-left: 8px;
+        font-weight: 100;
+        font-size: 1.5rem;
+    }
 }
 .swiper {
     width: 100%;

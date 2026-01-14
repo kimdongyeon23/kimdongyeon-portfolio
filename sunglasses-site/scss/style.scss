@@ -219,19 +219,20 @@ header {
     }
 }
 .store-info {
-    padding: .6rem 1rem;
+    padding: .8rem 1rem;
 
     h3 {
-        font-size: $font-base;
-        font-weight: 500;
-        margin-bottom: 1rem;
+        margin-bottom: 1.4rem;
+        font-size: $font-lg;
+        font-weight: 400;
     }
 }
 .store-address {
-    font-size: $font-xs;
+    font-size: $font-sm;
 
     p {
-        margin: 0 0 8px 10px;
+        margin: 0 0 14px 10px;
+        letter-spacing: -1px;
     }
 
     i::before {
@@ -276,14 +277,14 @@ header {
     }
 }
 .footer-legal {
+    padding: 1rem 1rem 120px 1rem;
     background: #fafafa;
     color: #555;
-    padding: 1rem 1rem 120px 1rem;
 
     a {
         display: block;
-        font-size: $font-xs;
         padding: .5rem 1rem;
+        font-size: $font-xs;
     }
 }
 .legal-links-list li:not(:last-child) {
@@ -291,10 +292,10 @@ header {
 
     &:after{
         content: '';
+        position: absolute;
         width: .1px;
         height: 15px;
         border: .4px solid #c5c5c5;
-        position: absolute;
         top: 8px;
         right: 0;
     }
@@ -302,15 +303,15 @@ header {
 
 /* ========== fixed-bottom-menu =========== */
 .fixed-bottom-menu {
-    width: 100%;
-    background: #000;
     position: fixed;
     left: 0;
     bottom: 0;
-    color: #fff;
-    justify-content: space-around;
     z-index: 1100;
     display: none;
+    justify-content: space-around;
+    width: 100%;
+    background: #000;
+    color: #fff;
 }
 .fixed-bottom-menu a {
     img {
@@ -359,12 +360,12 @@ header {
 
 /* ========== overlay-tab =========== */
 .overlay-tab {
-    display: none;
-    width: 100%;
-    height: 100vh;
     position: fixed;
     inset: 0 auto auto 0;
     z-index: 1000;
+    display: none;
+    width: 100%;
+    height: 100vh;
     flex-direction: column;
     padding: 1rem 1.2rem 100px 1.2rem;
     background-color: #fff;
@@ -377,10 +378,10 @@ header {
     }
     
     .tab-close-btn {
-        font-size: $font-xl;
         padding: .5rem;
         margin: 0 0 0.5rem auto;
         justify-self: self-end;
+        font-size: $font-xl;
         color: #444;
     }
 }
@@ -398,10 +399,10 @@ header {
 
     .login-btn {
         padding: .5rem 1rem;
+        margin-left: auto;
+        border-radius: 20px;
         background: #333;
         color: #fff;
-        border-radius: 20px;
-        margin-left: auto;
     }
 }
 .overlay-tab .contents-area {

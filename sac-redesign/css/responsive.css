@@ -1,0 +1,244 @@
+@media (max-width: 1370px) {
+    .inner {
+        width: 90%;
+    }
+    .hero-info {
+        left: 48px;
+        right: 48px;
+    }
+    .hero-controls {
+        left: 48px;
+    }
+    .notice-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    :root {
+        --header-height: 70px;
+    }
+    html {
+        font-size: 15px;
+    }
+    .logo img {
+        height: 40px;
+    }
+    header .header-links {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        max-height: calc(100vh - var(--header-height));
+        overflow-y: auto;
+        background-color: rgba(0, 0, 0, .92);
+        backdrop-filter: blur(10px);
+        padding: .5rem 0 1rem;
+        opacity: 0;
+        transform: translateY(-20px);
+        visibility: hidden;
+        transition: opacity .8s ease, transform .8s ease, visibility 0s .8s;    
+}
+    header .header-links.is-open {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        transition: opacity .8s ease, transform .8s ease, visibility 0s 0s;
+        pointer-events: auto;    
+    }
+    header .header-links ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    header .header-links li {
+        text-align: center;
+    }
+    header .header-links a {
+        padding: 1rem 0;
+    }
+    .menu-toggle-btn {
+        display: block;
+    }
+    .hero-info {
+        left: 32px;
+        right: 32px;
+    }
+    .hero-title {
+        margin-bottom: 20px;
+    }
+    .hero-controls {
+        left: 32px;
+        bottom: 90px;
+    }
+    .quick-links {
+        grid-template-columns: repeat(2, 1fr);
+        border-bottom: none;
+    }
+    .quick-item {
+        border-bottom: 1px solid #e0ddd8;
+        border-right: 1px solid #e0ddd8;
+    }
+    .quick-item:nth-child(2n) {
+        border-right: none;
+    }
+    .calendar-layout {
+        flex-direction: column;
+        gap: 16px;
+    }
+    #calendar {
+        flex: none;
+        width: 100%;
+    }
+    .venue-card {
+        flex: none;
+        width: 100%;
+        height: 280px;
+    }
+    .footer-top .inner {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer-top {
+        padding: 20px 0;
+        margin-bottom: 12px;
+    }   
+}
+
+@media (max-width: 768px) {
+    :root {
+        --header-height: 62px;
+    }
+    html {
+        font-size: 14px;
+    }
+    .logo img {
+        height: 34px;
+    }
+    header .header-actions {
+        gap: .6rem;
+    }
+    section {
+        padding: 4rem 0;
+    }
+    .hero-slide {
+        max-height: 420px;
+    }
+    .hero-info {
+        left: 20px;
+        right: 20px;
+    }
+    .hero-eyebrow {
+        font-size: 11px;
+    }
+    .hero-title {
+        font-size: 1.8rem;
+        margin-bottom: 16px;
+    }
+    .hero-actions a {
+        padding: 10px 18px;
+        font-size: 13px;
+    }
+    .hero-controls {
+        left: 20px;
+        bottom: 48px;
+    }
+    .quick-item {
+        padding: 14px;
+        gap: 12px;
+    }
+    .quick-icon {
+        width: 32px;
+        height: 32px;
+    }
+    .section-header {
+        margin-bottom: 28px;
+    }
+    .notice-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-top {
+        padding: 28px 0;
+    }
+    .footer-links ul {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .fc .fc-toolbar.fc-header-toolbar {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 560px) {
+    .hero-controls {
+        bottom: 24px;
+    }
+    .hero-slide-prev-btn,
+    .hero-slide-next-btn {
+        width: 40px;  
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --header-height: 56px;
+    }
+    html {
+        font-size: 13px;
+    }
+    .inner {
+        width: 92%;
+    }
+    .logo img {
+        height: 28px;
+    }
+    header .header-actions {
+        gap: .4rem;
+    }
+    .hero-eyebrow {
+        font-size: 9px;
+    }
+    .hero-title {
+        font-size: 1.15rem;
+        margin-bottom: 8px;
+    }
+    .hero-meta {
+        font-size: 10px;
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+    .hero-actions a {
+        padding: 9px 16px;
+        font-size: 12px;
+    }
+    .hero-controls {
+        bottom: 20px;
+    }
+    .quick-item {
+        border-right: none;
+    }
+    .ticket-name {
+        height: auto;
+    }
+    .btn-alarm {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+    .section-arrow-btn {
+        width: 30px;
+        height: 28px;
+        font-size: 12px;
+    }
+    .venue-card {
+        height: 220px;
+    }
+    .venue-card-desc {
+        font-size: 12px;
+    }
+    .fc-toolbar-chunk .fc-toolbar-title {
+        font-size: 14px;
+    }
+    .footer-bottom {
+        font-size: 10px;
+    }
+}

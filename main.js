@@ -4,30 +4,6 @@ document.querySelectorAll('a').forEach(link => {
     link.setAttribute('rel', 'noopener noreferrer');
 });
 
-// ========== 헤더 nav 이동 ========== 
-const navLinks = document.querySelectorAll('.nav-list a');
-navLinks.forEach(link => {
-    link.addEventListener('click', e => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href');
-        document.querySelector(targetId).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-// ================= 헤더 스크롤 =================
-window.addEventListener("scroll", () => {
-    const scrollTop = window.scrollY; 
-    const header = document.querySelector("header");
-
-    if (scrollTop >= 30) {
-        header.classList.add("fixed");   
-    } else {
-        header.classList.remove("fixed"); 
-    }
-});
-
 // ========== skill open btn ========== 
 const skillOpenBtn = document.querySelector('.open-btn');
 const skillDescList = document.querySelector('.skill-desc-list')
